@@ -193,7 +193,8 @@
 
         const grouped = {};
         species.forEach(name => {
-          const form = speciesGrowth[name] || "Unknown";
+          const key = name.trim().toLowerCase();
+          const form = speciesGrowth[key] || "unknown";
           if (!grouped[form]) grouped[form] = [];
           grouped[form].push(name);
         });
