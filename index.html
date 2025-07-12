@@ -6,41 +6,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: system-ui, sans-serif;
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: system-ui, sans-serif;
+  }
+
+  .container-fluid, .row {
+    height: 100%;
+    margin: 0;
+  }
+
+  #map {
+    width: 100%;
+    height: 100%;
+  }
+
+  #map-container {
+    position: relative;
+    height: 100%;
+    padding: 0;
+  }
+
+  #sidebar {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  #sidebar .content {
+    max-height: 100%;
+    overflow-y: auto;
+  }
+
+  .zoom-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
+
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
     }
 
-    #map {
-      width: 100%;
-      height: 100%;
+    #map-container {
+      height: 50%;
     }
 
-    #sidebar .content {
-      max-height: 100%;
-      overflow-y: auto;
-    }
-
-    .species-list {
-      padding-left: 1em;
+    #sidebar {
+      height: 50%;
     }
 
     .zoom-btn {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      z-index: 1000;
+      top: auto;
+      bottom: 10px;
     }
+  }
 
-    @media (max-width: 768px) {
-      .zoom-btn {
-        top: auto;
-        bottom: 10px;
-      }
-    }
-  </style>
+  .species-list {
+    padding-left: 1em;
+  }
+</style>
+
 </head>
 <body>
   <div class="container-fluid h-100">
