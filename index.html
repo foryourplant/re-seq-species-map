@@ -14,23 +14,19 @@
       overflow: hidden;
       font-family: system-ui, sans-serif;
     }
-
     #container {
       display: flex;
       height: 100%;
       flex-direction: row;
     }
-
     #map-container {
       flex: 2;
       position: relative;
     }
-
     #map {
       width: 100%;
       height: 100%;
     }
-
     #sidebar {
       flex: 1;
       overflow-y: auto;
@@ -38,35 +34,29 @@
       background-color: #f8f9fa;
       border-left: 1px solid #ccc;
     }
-
     .zoom-btn {
       position: absolute;
       top: 10px;
       left: 10px;
       z-index: 1000;
     }
-
     @media (max-width: 768px) {
       #container {
         flex-direction: column;
       }
-
       #map-container {
         height: 50%;
       }
-
       #sidebar {
         height: 50%;
         border-left: none;
         border-top: 1px solid #ccc;
       }
-
       .zoom-btn {
         bottom: 10px;
         top: auto;
       }
     }
-
     .species-list {
       margin-bottom: 1rem;
     }
@@ -148,7 +138,6 @@
       );
     }
 
-    // Load RE colours and species growth habit JSON
     Promise.all([
       fetch("https://foryourplant.github.io/re-seq-species-map/re-colours.json").then(r => r.json()),
       fetch("https://foryourplant.github.io/re-seq-species-map/species_growth.json").then(r => r.json())
@@ -183,11 +172,10 @@
         if (marker) marker.remove();
         marker = new maplibregl.Marker().setLngLat(coords).addTo(map);
 
-        let species = Object.keys(props)
+        const species = Object.keys(props)
           .filter(k => k.startsWith("species_"))
           .map(k => props[k])
           .filter(v => v && v.trim() !== "");
-        console.log("Species in polygon (raw):", species);
 
         const reCodes = props.re.split("/").map(code => code.trim());
         const reLinks = reCodes.map(code => `<a href="https://apps.des.qld.gov.au/regional-ecosystems/details/?re=${encodeURIComponent(code)}" target="_blank">${code}</a>`).join(" / ");
@@ -200,19 +188,23 @@
           grouped[form].push(name);
         });
 
-        const order = ["tree", "shrub", "herb", "grass", "vine", "unknown"];
+        const allKeys = Object.keys(grouped);
+        const preferredOrder = ["tree", "shrub", "herb", "grass", "vine"];
+        const remaining = allKeys.filter(k => !preferredOrder.includes(k));
+        const finalOrder = [...preferredOrder, ...remaining];
+
         const infoDiv = document.getElementById("info");
         let html = `<h3>RE ${reLinks}</h3><h4>Species List (${species.length})</h4>`;
 
-        order.forEach(type => {
+        finalOrder.forEach(type => {
           const list = grouped[type];
           if (list && list.length) {
             const links = list
               .map(s => `<a href="https://bie.ala.org.au/species/${encodeURIComponent(s)}" target="_blank">${s}</a>`)
               .join(", ");
             const emoji = {
-              tree: "🌳", shrub: "🌿", herb: "🌱", grass: "🌾", vine: "🍇", unknown: "❓"
-            }[type] || "";
+              tree: "🌳", shrub: "🌿", herb: "🌱", grass: "🌾", vine: "🍇"
+            }[type.toLowerCase()] || "❓";
             html += `<p><strong>${emoji} ${type.charAt(0).toUpperCase() + type.slice(1)}:</strong><br>${links}</p>`;
           }
         });
