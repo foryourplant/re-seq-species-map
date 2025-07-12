@@ -6,75 +6,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
   <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
-  <style>html, body, #map { margin: 0; height: 100%; }</style>
+  <style>
+    html, body, #map {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <div id="map"></div>
   <script>
-  const map = new maplibregl.Map({
-    container: 'map',
-    style: {
-      version: 8,
-      sources: {
-        "openmaptiles": {
-          type: "raster",
-          tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
-          tileSize: 256
-        },
-        "species": {
-          type: "vector",
-          tiles: ["https://foryourplant.github.io/re-seq-species-map/tiles/{z}/{x}/{y}.pbf"],
-          minzoom: 0,
-          maxzoom: 14
-        }
-      },
-      layers: [
-        {
-          id: "osm-basemap",
-          type: "raster",
-          source: "openmaptiles"
-        }
-      ]
-    },
-    center: [153.0, -27.5],
-    zoom: 6
-  });
-
-  map.on('load', () => {
-    fetch('re-colours.json')
-      .then(res => res.json())
-      .then(colorMap => {
-        const match = ['match', ['get', 'RE']];
-        for (const [re, color] of Object.entries(colorMap)) {
-          match.push(re, color);
-        }
-        match.push('#cccccc'); // fallback color
-
-        map.addLayer({
-          id: 'species-fill',
-          type: 'fill',
-          source: 'species',
-          'source-layer': 'species_fields',
-          paint: {
-            'fill-color': match,
-            'fill-opacity': 0.6
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: {
+        version: 8,
+        sources: {
+          "openmaptiles": {
+            type: "raster",
+            tiles: [
+              "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+            ],
+            tileSize: 256
+          },
+          "species": {
+            type: "vector",
+            tiles: [
+              "https://foryourplant.github.io/re-seq-species-map/tiles/{z}/{x}/{y}.pbf"
+            ],
+            minzoom: 0,
+            maxzoom: 14
           }
+        },
+        layers: [
+          {
+            id: "osm-basemap",
+            type: "raster",
+            source: "openmaptiles"
+          },
+          {
+            id: "species-fill",
+            type: "fill",
+            source: "species",
+            "source-layer": "species_fields",
+            paint: {
+              "fill-color": "#44aadd",  // default color, will be overridden
+              "fill-opacity": 0.6
+            }
+          }
+        ]
+      },
+      center: [153.0, -27.5],
+      zoom: 6
+    });
+
+    // Color polygons by RE code
+    map.on('load', () => {
+      fetch('https://foryourplant.github.io/re-seq-species-map/colours.json')
+        .then(response => response.json())
+        .then(colorMap => {
+          const colorExpression = ['match', ['get', 'RE']];
+          for (const [key, color] of Object.entries(colorMap)) {
+            colorExpression.push(key, color);
+          }
+          colorExpression.push('#888888'); // fallback color
+
+          map.setPaintProperty('species-fill', 'fill-color', colorExpression);
         });
+
+      // Add labels
+      map.addLayer({
+        id: "species-labels",
+        type: "symbol",
+        source: "species",
+        "source-layer": "species_fields",
+        layout: {
+          "text-field": ["get", "RE"],
+          "text-font": ["Open Sans Regular", "Arial Unicode MS Regular"],
+          "text-size": 12
+        },
+        paint: {
+          "text-color": "#000000"
+        }
       });
-  });
+    });
 
-  map.on('click', 'species-fill', function (e) {
-    const props = e.features[0].properties;
-    let html = "";
-    for (const key in props) {
-      html += `<strong>${key}</strong>: ${props[key]}<br/>`;
-    }
-    new maplibregl.Popup()
-      .setLngLat(e.lngLat)
-      .setHTML(html)
-      .addTo(map);
-  });
-</script>
-
+    // Popup on click
+    map.on('click', 'species-fill', function (e) {
+      const props = e.features[0].properties;
+      let html = "";
+      for (const key in props) {
+        html += `<strong>${key}</strong>: ${props[key]}<br/>`;
+      }
+      new maplibregl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(html)
+        .addTo(map);
+    });
+  </script>
 </body>
 </html>
