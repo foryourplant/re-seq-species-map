@@ -41,7 +41,7 @@
   });
 
   map.on('load', () => {
-    fetch('re-colors.json')
+    fetch('re-colours.json')
       .then(res => res.json())
       .then(colorMap => {
         const match = ['match', ['get', 'RE']];
