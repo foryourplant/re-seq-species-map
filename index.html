@@ -14,63 +14,96 @@
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow: hidden;
+    font-family: system-ui, sans-serif;
   }
 
-  .container-fluid {
+  #container {
+    display: flex;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .row {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (min-width: 768px) {
-    .row {
-      flex-direction: row;
-    }
+    width: 100vw;
+    flex-direction: row;
   }
 
   #map {
-    height: calc(50vh - 56px); /* Adjust for button height/padding if needed */
-  }
-
-  
-
-  @media (min-width: 768px) {
-    #map {
-      height: 100%;
-    }
+    flex: 1;
+    height: 100%;
   }
 
   #sidebar {
-    padding: 1rem;
-    background: #f8f9fa;
+    width: 350px;
+    max-width: 100%;
+    background: #f9f9f9;
+    border-left: 1px solid #ddd;
+    padding: 16px;
+    box-sizing: border-box;
     overflow-y: auto;
-    height: auto;
+    height: 100%;
   }
 
-  @media (min-width: 768px) {
-    #sidebar {
-      width: 33.3333%;
-      height: 100%;
-    }
+  h2, h3, h4 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    margin: 0.5em 0;
   }
 
   .species-list {
-    padding-left: 1em;
+    padding-left: 1.2em;
+    margin-top: 0.5em;
+  }
+
+  .species-list li {
+    margin-bottom: 4px;
+    line-height: 1.3;
   }
 
   .zoom-btn {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    z-index: 10;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .zoom-btn:hover {
+    background: #005fa3;
+  }
+
+  a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Mobile layout */
+  @media (max-width: 767px) {
+    #container {
+      flex-direction: column;
+    }
+
+    #map {
+      height: 50%;
+    }
+
+    #sidebar {
+      width: 100%;
+      height: 50%;
+      border-left: none;
+      border-top: 1px solid #ddd;
+    }
   }
 </style>
+
 
 </head>
 <body>
