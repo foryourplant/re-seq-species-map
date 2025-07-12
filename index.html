@@ -103,11 +103,11 @@
         "source-layer": "species_fields",
         paint: {
           "fill-color": matchColors,
-          "fill-opacity": 0.6
+          "fill-opacity": 0.3
         }
       });
 
-      map.addLayer({
+      /*map.addLayer({
         id: "species-labels",
         type: "symbol",
         source: "species",
@@ -121,7 +121,7 @@
           "text-halo-color": "#fff",
           "text-halo-width": 1
         }
-      });
+      });*/
 
       map.on('click', (e) => {
         const features = map.queryRenderedFeatures(e.point, {
@@ -144,15 +144,23 @@
           .map(k => props[k])
           .filter(v => v && v.trim() !== "");
 
+        const reCodes = props.re.split("/").map(code => code.trim());
+        const reLinks = reCodes.map(code => `<a href="https://apps.des.qld.gov.au/regional-ecosystems/details/?re=${encodeURIComponent(code)}" target="_blank">${code}</a>`).join(" / ");
+
         const infoDiv = document.getElementById('info');
         infoDiv.innerHTML = `
-          <h3>RE ${props.re}</h3>
-          <p><strong>Polygon ID:</strong> ${props.polygon_id}</p>
+          <h3>RE ${reLinks}</h3>
+          <!--<p><strong>Polygon ID:</strong> ${props.polygon_id}</p>-->
           <h4>Species List (${species.length})</h4>
-          <ul class="species-list">
-            ${species.map(s => `<li>${s}</li>`).join('')}
-          </ul>
+          ${
+            species.length > 0
+              ? `<ul class="species-list">
+                  ${species.map(s => `<li><a href="https://bie.ala.org.au/species/${encodeURIComponent(s)}" target="_blank">${s}</a></li>`).join('')}
+                </ul>`
+              : `<p>This RE has no available species surveyed.</p>`
+          }
         `;
+
       });
 
       map.addControl(new maplibregl.NavigationControl());
