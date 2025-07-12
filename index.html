@@ -6,19 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
   <style>
-    body, html {
+    html, body {
       margin: 0;
+      padding: 0;
       height: 100%;
-      font-family: sans-serif;
+      font-family: system-ui, sans-serif;
     }
 
     #container {
       display: flex;
+      flex-direction: row;
       height: 100%;
     }
 
     #map {
       flex: 2;
+      min-height: 300px;
     }
 
     #sidebar {
@@ -27,15 +30,53 @@
       box-sizing: border-box;
       overflow-y: auto;
       border-left: 1px solid #ddd;
-      background: #f9f9f9;
+      background: #fafafa;
     }
 
-    h2 {
+    h2, h3, h4 {
       margin-top: 0;
     }
 
     .species-list {
-      padding-left: 1em;
+      padding-left: 1.25em;
+    }
+
+    .zoom-btn {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-size: 14px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+
+    .zoom-btn:hover {
+      background: #f0f0f0;
+    }
+
+    @media (max-width: 768px) {
+      #container {
+        flex-direction: column;
+      }
+
+      #map {
+        height: 50vh;
+      }
+
+      #sidebar {
+        border-left: none;
+        border-top: 1px solid #ddd;
+      }
+
+      .zoom-btn {
+        bottom: 10px;
+        left: 10px;
+      }
     }
   </style>
 </head>
@@ -44,13 +85,15 @@
   <div id="map"></div>
   <div id="sidebar">
     <h2>RE Species Viewer</h2>
-    <p>This map shows Regional Ecosystem polygons, coloured by code. Click on an area to view a list of recorded species at that location.</p>
+    <p>This interactive map displays Queensland's Regional Ecosystems, coloured by their RE code. Click any polygon to view associated plant species.</p>
     <hr />
     <div id="info">
       <em>Click on the map to see species...</em>
     </div>
   </div>
 </div>
+
+<button class="zoom-btn" onclick="zoomToUser()">📍 My Location</button>
 
 <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
 <script>
@@ -83,7 +126,7 @@
         }
       ]
     },
-    center: [152.6635608, -27.3811458],
+    center: [152.66, -27.38],
     zoom: 10
   });
 
@@ -103,7 +146,7 @@
         "source-layer": "species_fields",
         paint: {
           "fill-color": matchColors,
-          "fill-opacity": 0.2
+          "fill-opacity": 0.25
         }
       });
 
@@ -129,26 +172,40 @@
           .filter(v => v && v.trim() !== "");
 
         const reCodes = props.re.split("/").map(code => code.trim());
-        const reLinks = reCodes.map(code => `<a href="https://apps.des.qld.gov.au/regional-ecosystems/details/?re=${encodeURIComponent(code)}" target="_blank">${code}</a>`).join(" / ");
+        const reLinks = reCodes.map(code =>
+          `<a href="https://apps.des.qld.gov.au/regional-ecosystems/details/?re=${encodeURIComponent(code)}" target="_blank">${code}</a>`
+        ).join(" / ");
 
         const infoDiv = document.getElementById('info');
         infoDiv.innerHTML = `
           <h3>RE ${reLinks}</h3>
-          <!--<p><strong>Polygon ID:</strong> ${props.polygon_id}</p>-->
           <h4>Species List (${species.length})</h4>
           ${
             species.length > 0
               ? `<ul class="species-list">
                   ${species.map(s => `<li><a href="https://bie.ala.org.au/species/${encodeURIComponent(s)}" target="_blank">${s}</a></li>`).join('')}
                 </ul>`
-              : `<p>This RE has no available species surveyed.</p>`
+              : `<p><em>This RE has no available species surveyed.</em></p>`
           }
         `;
-
       });
 
       map.addControl(new maplibregl.NavigationControl());
     });
+
+  function zoomToUser() {
+    if (!navigator.geolocation) {
+      alert("Geolocation not supported in your browser.");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(position => {
+      const { latitude, longitude } = position.coords;
+      map.flyTo({ center: [longitude, latitude], zoom: 14 });
+    }, () => {
+      alert("Unable to access your location.");
+    });
+  }
 </script>
 </body>
 </html>
