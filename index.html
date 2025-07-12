@@ -12,31 +12,46 @@
   <div id="map"></div>
   <script>
     const map = new maplibregl.Map({
-      container: 'map',
-      style: {
+    container: 'map',
+    style: {
         version: 8,
         sources: {
-          "species": {
+        "openmaptiles": {
+            type: "raster",
+            tiles: [
+            "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+            ],
+            tileSize: 256
+        },
+        "species": {
             type: "vector",
             tiles: ["./tiles/{z}/{x}/{y}.pbf"],
             minzoom: 0,
             maxzoom: 14
-          }
+        }
         },
-        layers: [{
-          id: "species-fill",
-          type: "fill",
-          source: "species",
-          "source-layer": "species_fields",
-          paint: {
+        layers: [
+        {
+            id: "osm-basemap",
+            type: "raster",
+            source: "openmaptiles"
+        },
+        {
+            id: "species-fill",
+            type: "fill",
+            source: "species",
+            "source-layer": "species_fields",
+            paint: {
             "fill-color": "#44aadd",
             "fill-opacity": 0.6
-          }
-        }]
-      },
-      center: [153.0, -27.5],
-      zoom: 6
+            }
+        }
+        ]
+    },
+    center: [153.0, -27.5],
+    zoom: 6
     });
+
 
     map.on('click', 'species-fill', function (e) {
       const props = e.features[0].properties;
