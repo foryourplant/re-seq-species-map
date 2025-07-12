@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>RE Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+  <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
+  <style>html, body, #map { margin: 0; height: 100%; }</style>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: {
+        version: 8,
+        sources: {
+          "species": {
+            type: "vector",
+            tiles: ["./tiles/{z}/{x}/{y}.pbf"],
+            minzoom: 0,
+            maxzoom: 14
+          }
+        },
+        layers: [{
+          id: "species-fill",
+          type: "fill",
+          source: "species",
+          "source-layer": "species_fields",
+          paint: {
+            "fill-color": "#44aadd",
+            "fill-opacity": 0.6
+          }
+        }]
+      },
+      center: [153.0, -27.5],
+      zoom: 6
+    });
+
+    map.on('click', 'species-fill', function (e) {
+      const props = e.features[0].properties;
+      let html = "";
+      for (const key in props) {
+        html += `<strong>${key}</strong>: ${props[key]}<br/>`;
+      }
+      new maplibregl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(html)
+        .addTo(map);
+    });
+  </script>
+</body>
+</html>
