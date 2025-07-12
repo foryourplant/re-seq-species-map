@@ -68,7 +68,7 @@
     }
 
     .species-list {
-      padding-left: 1em;
+      margin-bottom: 1rem;
     }
   </style>
 </head>
@@ -76,12 +76,14 @@
   <div id="container">
     <div id="map-container">
       <div id="map"></div>
-      <button class="btn btn-primary zoom-btn" onclick="zoomToLocation(event)">Zoom to my location</button>
+      <button class="btn btn-primary zoom-btn" onclick="zoomToLocation(event)">
+        Zoom to my location
+      </button>
     </div>
     <div id="sidebar">
       <div class="content">
         <h2>RE Species Viewer</h2>
-        <p>Click an area to see a list of associated plant species.</p>
+        <p>Click an area to see a list of associated plant species, grouped by growth habit.</p>
         <hr />
         <div id="info">
           <em>Click on the map to see species...</em>
@@ -121,12 +123,12 @@
           }
         ]
       },
-      center: [152.66, -27.38],
+      center: [153.0626048, -27.5808256],
       zoom: 10
     });
 
     let marker;
-    let growthFormMap = {};
+    let speciesGrowth = {};
 
     function zoomToLocation(e) {
       e.preventDefault();
@@ -146,102 +148,78 @@
       );
     }
 
-    function groupSpecies(speciesList) {
-      const groups = {
-        Tree: [],
-        Shrub: [],
-        Vine: [],
-        Grass: [],
-        Herb: [],
-        Unknown: []
-      };
+    // Load RE colours and species growth habit JSON
+    Promise.all([
+      fetch("https://foryourplant.github.io/re-seq-species-map/re-colours.json").then(r => r.json()),
+      fetch("https://foryourplant.github.io/re-seq-species-map/species_growth.json").then(r => r.json())
+    ]).then(([colorMap, growthData]) => {
+      speciesGrowth = growthData;
 
-      for (const name of speciesList) {
-        const form = growthFormMap[name] || "Unknown";
-        if (groups[form]) {
-          groups[form].push(name);
-        } else {
-          groups.Unknown.push(name);
+      const matchColors = ["match", ["get", "re"]];
+      for (const re in colorMap) matchColors.push(re, colorMap[re]);
+      matchColors.push("#cccccc");
+
+      map.addLayer({
+        id: "species-fill",
+        type: "fill",
+        source: "species",
+        "source-layer": "species_fields",
+        paint: {
+          "fill-color": matchColors,
+          "fill-opacity": 0.2
         }
-      }
-
-      return groups;
-    }
-
-    function displaySpeciesGrouped(speciesArray, reCodes) {
-      const grouped = groupSpecies(speciesArray);
-      const container = document.getElementById("info");
-
-      const reLinks = reCodes.map(code => 
-        `<a href="https://apps.des.qld.gov.au/regional-ecosystems/details/?re=${encodeURIComponent(code)}" target="_blank">${code}</a>`
-      ).join(" / ");
-
-      container.innerHTML = `<h3>RE ${reLinks}</h3><h4>Species List</h4>`;
-
-      for (const [form, list] of Object.entries(grouped)) {
-        if (list.length === 0) continue;
-        const section = document.createElement('div');
-        section.innerHTML = `<strong>${form}s</strong><ul class="species-list">${list.map(s =>
-          `<li><a href="https://bie.ala.org.au/species/${encodeURIComponent(s)}" target="_blank">${s}</a></li>`
-        ).join('')}</ul>`;
-        container.appendChild(section);
-      }
-
-      if (speciesArray.length === 0) {
-        container.innerHTML += `<p>This RE has no available species surveyed.</p>`;
-      }
-    }
-
-    // Load growth form map, then add layer
-    fetch('species_growth_form.json')
-      .then(res => res.json())
-      .then(data => {
-        growthFormMap = data;
-
-        fetch('https://foryourplant.github.io/re-seq-species-map/re-colours.json')
-          .then(res => res.json())
-          .then(colorMap => {
-            const matchColors = ["match", ["get", "re"]];
-            for (const re in colorMap) matchColors.push(re, colorMap[re]);
-            matchColors.push("#cccccc");
-
-            map.addLayer({
-              id: "species-fill",
-              type: "fill",
-              source: "species",
-              "source-layer": "species_fields",
-              paint: {
-                "fill-color": matchColors,
-                "fill-opacity": 0.2
-              }
-            });
-
-            map.on("click", (e) => {
-              const features = map.queryRenderedFeatures(e.point, {
-                layers: ["species-fill"]
-              });
-              if (!features.length) return;
-
-              const feature = features[0];
-              const coords = e.lngLat;
-              const props = feature.properties;
-
-              if (marker) marker.remove();
-              marker = new maplibregl.Marker().setLngLat(coords).addTo(map);
-
-              const species = Object.keys(props)
-                .filter(k => k.startsWith("species_"))
-                .map(k => props[k])
-                .filter(v => v && v.trim() !== "");
-
-              const reCodes = props.re.split("/").map(code => code.trim());
-
-              displaySpeciesGrouped(species, reCodes);
-            });
-
-            map.addControl(new maplibregl.NavigationControl());
-          });
       });
+
+      map.on("click", (e) => {
+        const features = map.queryRenderedFeatures(e.point, {
+          layers: ["species-fill"]
+        });
+        if (!features.length) return;
+
+        const feature = features[0];
+        const coords = e.lngLat;
+        const props = feature.properties;
+
+        if (marker) marker.remove();
+        marker = new maplibregl.Marker().setLngLat(coords).addTo(map);
+
+        let species = Object.keys(props)
+          .filter(k => k.startsWith("species_"))
+          .map(k => props[k])
+          .filter(v => v && v.trim() !== "");
+
+        const reCodes = props.re.split("/").map(code => code.trim());
+        const reLinks = reCodes.map(code => `<a href="https://apps.des.qld.gov.au/regional-ecosystems/details/?re=${encodeURIComponent(code)}" target="_blank">${code}</a>`).join(" / ");
+
+        const grouped = {};
+        species.forEach(name => {
+          const form = speciesGrowth[name] || "Unknown";
+          if (!grouped[form]) grouped[form] = [];
+          grouped[form].push(name);
+        });
+
+        const order = ["tree", "shrub", "herb", "grass", "vine", "unknown"];
+        const infoDiv = document.getElementById("info");
+        let html = `<h3>RE ${reLinks}</h3><h4>Species List (${species.length})</h4>`;
+
+        order.forEach(type => {
+          const list = grouped[type];
+          if (list && list.length) {
+            const links = list
+              .map(s => `<a href="https://bie.ala.org.au/species/${encodeURIComponent(s)}" target="_blank">${s}</a>`)
+              .join(", ");
+            const emoji = {
+              tree: "🌳", shrub: "🌿", herb: "🌱", grass: "🌾", vine: "🍇", unknown: "❓"
+            }[type] || "";
+            html += `<p><strong>${emoji} ${type.charAt(0).toUpperCase() + type.slice(1)}:</strong><br>${links}</p>`;
+          }
+        });
+
+        infoDiv.innerHTML = html;
+      });
+
+      map.addControl(new maplibregl.NavigationControl());
+    });
   </script>
 </body>
 </html>
