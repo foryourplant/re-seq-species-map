@@ -187,6 +187,7 @@
           .filter(k => k.startsWith("species_"))
           .map(k => props[k])
           .filter(v => v && v.trim() !== "");
+        console.log("Species in polygon (raw):", species);
 
         const reCodes = props.re.split("/").map(code => code.trim());
         const reLinks = reCodes.map(code => `<a href="https://apps.des.qld.gov.au/regional-ecosystems/details/?re=${encodeURIComponent(code)}" target="_blank">${code}</a>`).join(" / ");
