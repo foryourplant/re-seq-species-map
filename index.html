@@ -2,107 +2,74 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>RE Map</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+  <title>RE Species Map</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
   <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
   <style>
-    html, body, #map {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-    }
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
   </style>
 </head>
 <body>
-  <div id="map"></div>
-  <script>
-    const map = new maplibregl.Map({
-      container: 'map',
-      style: {
-        version: 8,
-        glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
-        sources: {
-          "openmaptiles": {
-            type: "raster",
-            tiles: [
-              "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+<div id="map"></div>
+
+<script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+<script>
+  const map = new maplibregl.Map({
+    container: 'map',
+    style: {
+      version: 8,
+      glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf", // ✅ REQUIRED for text labels
+      sources: {
+        "species": {
+          type: "vector",
+          tiles: ["https://foryourplant.github.io/re-seq-species-map/tiles/{z}/{x}/{y}.pbf"],
+          minzoom: 0,
+          maxzoom: 14
+        }
+      },
+      layers: [
+        {
+          id: "species-fill",
+          type: "fill",
+          source: "species",
+          "source-layer": "species_fields", // same name as used in tippecanoe `-l species_fields`
+          paint: {
+            "fill-color": [
+              "match",
+              ["get", "re"],
+              // Add auto-generated or manually mapped colours here (example):
+              "12.8.16", "#e41a1c",
+              "11.5.1", "#377eb8",
+              "8.2.3", "#4daf4a",
+              /* default */ "#cccccc"
             ],
-            tileSize: 256
-          },
-          "species": {
-            type: "vector",
-            tiles: [
-              "https://foryourplant.github.io/re-seq-species-map/tiles/{z}/{x}/{y}.pbf"
-            ],
-            minzoom: 0,
-            maxzoom: 14
+            "fill-opacity": 0.6
           }
         },
-        layers: [
-          {
-            id: "osm-basemap",
-            type: "raster",
-            source: "openmaptiles"
+        {
+          id: "species-labels",
+          type: "symbol",
+          source: "species",
+          "source-layer": "species_fields",
+          layout: {
+            "text-field": ["get", "re"],
+            "text-size": 12
           },
-          {
-            id: "species-fill",
-            type: "fill",
-            source: "species",
-            "source-layer": "species_fields",
-            paint: {
-              "fill-color": "#44aadd",  // temporary until JSON loads
-              "fill-opacity": 0.6
-            }
+          paint: {
+            "text-color": "#000000",
+            "text-halo-color": "#ffffff",
+            "text-halo-width": 1
           }
-        ]
-      },
-      center: [153.0, -27.5],
-      zoom: 6
-    });
+        }
+      ]
+    },
+    center: [151.7, -26.97], // Adjust to center on your data
+    zoom: 10
+  });
 
-    // Apply dynamic colours from external JSON
-    map.on('load', () => {
-      fetch('https://foryourplant.github.io/re-seq-species-map/re-colours.json')
-        .then(response => response.json())
-        .then(colorMap => {
-          const colorExpression = ['match', ['get', 'RE']];
-          for (const [key, color] of Object.entries(colorMap)) {
-            colorExpression.push(key, color);
-          }
-          colorExpression.push('#888888'); // fallback
-          map.setPaintProperty('species-fill', 'fill-color', colorExpression);
-
-          // Add labels now that glyphs are defined
-          map.addLayer({
-            id: "species-labels",
-            type: "symbol",
-            source: "species",
-            "source-layer": "species_fields",
-            layout: {
-              "text-field": ["get", "RE"],
-              "text-font": ["Open Sans Regular"],
-              "text-size": 12
-            },
-            paint: {
-              "text-color": "#000000"
-            }
-          });
-        });
-    });
-
-    map.on('click', 'species-fill', function (e) {
-      const props = e.features[0].properties;
-      let html = "";
-      for (const key in props) {
-        html += `<strong>${key}</strong>: ${props[key]}<br/>`;
-      }
-      new maplibregl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML(html)
-        .addTo(map);
-    });
-  </script>
+  // Optional: Add zoom and navigation controls
+  map.addControl(new maplibregl.NavigationControl());
+</script>
 </body>
 </html>
