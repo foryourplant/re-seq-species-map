@@ -3,15 +3,54 @@
 <head>
   <meta charset="utf-8" />
   <title>RE Species Map</title>
-  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
   <style>
-    body { margin: 0; padding: 0; }
-    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    body, html {
+      margin: 0;
+      height: 100%;
+      font-family: sans-serif;
+    }
+
+    #container {
+      display: flex;
+      height: 100%;
+    }
+
+    #map {
+      flex: 2;
+    }
+
+    #sidebar {
+      flex: 1;
+      padding: 16px;
+      box-sizing: border-box;
+      overflow-y: auto;
+      border-left: 1px solid #ddd;
+      background: #f9f9f9;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .species-list {
+      padding-left: 1em;
+    }
   </style>
 </head>
 <body>
-<div id="map"></div>
+<div id="container">
+  <div id="map"></div>
+  <div id="sidebar">
+    <h2>RE Species Viewer</h2>
+    <p>This map shows Regional Ecosystem polygons, coloured by code. Click on an area to view a list of recorded species at that location.</p>
+    <hr />
+    <div id="info">
+      <em>Click on the map to see species...</em>
+    </div>
+  </div>
+</div>
 
 <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
 <script>
@@ -21,17 +60,13 @@
       version: 8,
       glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
       sources: {
-        // Basemap source (OpenStreetMap raster)
-        "osm": {
+        osm: {
           type: "raster",
-          tiles: [
-            "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          ],
+          tiles: ["https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"],
           tileSize: 256,
           attribution: "© OpenStreetMap contributors"
         },
-        // Vector tile source
-        "species": {
+        species: {
           type: "vector",
           tiles: ["https://foryourplant.github.io/re-seq-species-map/tiles/{z}/{x}/{y}.pbf"],
           minzoom: 0,
@@ -39,7 +74,6 @@
         }
       },
       layers: [
-        // Basemap layer
         {
           id: "osm-base",
           type: "raster",
@@ -47,36 +81,32 @@
           minzoom: 0,
           maxzoom: 22
         }
-        // The species layers will be added after loading the JSON
       ]
     },
     center: [151.7, -26.97],
     zoom: 10
   });
 
-  // Load colour mapping and inject vector style layers
+  let marker;
+
   fetch('https://foryourplant.github.io/re-seq-species-map/re-colours.json')
-    .then(response => response.json())
+    .then(res => res.json())
     .then(colorMap => {
       const matchColors = ["match", ["get", "re"]];
-      for (const re in colorMap) {
-        matchColors.push(re, colorMap[re]);
-      }
-      matchColors.push("#cccccc"); // fallback
+      for (const re in colorMap) matchColors.push(re, colorMap[re]);
+      matchColors.push("#cccccc");
 
-      // Fill polygons with RE-based colours
       map.addLayer({
         id: "species-fill",
         type: "fill",
         source: "species",
-        "source-layer": "species_fields", // double-check your actual source-layer name
+        "source-layer": "species_fields",
         paint: {
           "fill-color": matchColors,
           "fill-opacity": 0.6
         }
       });
 
-      // Add labels with RE name
       map.addLayer({
         id: "species-labels",
         type: "symbol",
@@ -92,10 +122,41 @@
           "text-halo-width": 1
         }
       });
-    })
-    .catch(err => console.error("Failed to load re-colours.json:", err));
 
-  map.addControl(new maplibregl.NavigationControl());
+      map.on('click', (e) => {
+        const features = map.queryRenderedFeatures(e.point, {
+          layers: ['species-fill']
+        });
+
+        if (!features.length) return;
+
+        const feature = features[0];
+        const coords = e.lngLat;
+        const props = feature.properties;
+
+        // Drop marker
+        if (marker) marker.remove();
+        marker = new maplibregl.Marker().setLngLat(coords).addTo(map);
+
+        // Build species list
+        let species = Object.keys(props)
+          .filter(k => k.startsWith("species_"))
+          .map(k => props[k])
+          .filter(v => v && v.trim() !== "");
+
+        const infoDiv = document.getElementById('info');
+        infoDiv.innerHTML = `
+          <h3>RE ${props.re}</h3>
+          <p><strong>Polygon ID:</strong> ${props.polygon_id}</p>
+          <h4>Species List (${species.length})</h4>
+          <ul class="species-list">
+            ${species.map(s => `<li>${s}</li>`).join('')}
+          </ul>
+        `;
+      });
+
+      map.addControl(new maplibregl.NavigationControl());
+    });
 </script>
 </body>
 </html>
