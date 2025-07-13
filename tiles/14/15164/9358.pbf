@@ -1,418 +1,0 @@
-“hx
-species_fields(€ OBJECTIDre	region_id
-polygon_id	species_1	species_2	species_3	species_4	species_5	species_6	species_7	species_8	species_9
-species_10
-species_11
-species_12
-species_13
-species_14
-species_15
-species_16
-species_17
-species_18
-species_19
-species_20
-species_21
-species_22
-species_23
-species_24
-species_25
-species_26
-species_27
-species_28
-species_29
-species_30
-species_31
-species_32
-species_33
-species_34
-species_35
-species_36
-species_37
-species_38
-species_39
-species_40
-species_41
-species_42
-species_43
-species_44
-species_45
-species_46
-species_47
-species_48
-species_49
-species_50
-species_51
-species_52
-species_53
-species_54
-species_55
-species_56
-species_57
-species_58
-species_59
-species_60
-species_61
-species_62
-species_63
-species_64
-species_65
-species_66
-species_67
-species_68
-species_69
-species_70
-species_71
-species_72
-species_73
-species_74
-species_75
-species_76
-species_77
-species_78
-species_79
-species_80
-species_81
-species_82
-species_83
-species_84
-species_85
-species_86
-species_87
-species_88
-species_89
-species_90
-species_91
-species_92
-species_93
-species_94
-species_95
-species_96
-species_97
-species_98
-species_99species_100species_101species_102species_103species_104species_105species_106species_107species_108species_109species_110species_111species_112species_113species_114species_115species_116species_117species_118species_119species_120species_121species_122species_123species_124species_125species_126species_127species_128species_129species_130species_131species_132species_133species_134species_135species_136species_137species_138species_139species_140species_141species_142species_143species_144species_145species_146species_147species_148species_149species_150species_151species_152species_153species_154species_155species_156species_157species_158species_159species_160species_161species_162species_163species_164"
-12"
-12.2.6"
-12.2.7"
-12.2.9"	
-12.2.15"
-
-12.2.15a"
-Ipomoea pes"
-Monotoca sp"
-Olax retusa"
-Restio indet"
-Baeckea indet"
-Banksia robur"
-Baumea juncea"
-Cyperus indet"
-Gahnia aspera"
-Hakea actites"
-Poaceae indet"
-Aotus lanigera"
-Banksia aemula"
-Boronia glabra"
-Caustis blakei"
-Cyperus haspan"
-Drosera binata"
-Ficus opposita"
-Gahnia clarkei"
-Goodenia indet"
-Marsilea indet"
-Panicum simile"
-Paspalum indet"
-Aotus ericoides"
-Banksia serrata"
-Bossiaea ensata"
-Cyperus lucidus"
-Dentella repens"
-Empodisma minus"
-Lindsaea incisa"
-Panicum effusum"
-Persoonia media"
-Pomax umbellata"
-Schizaea bifida"
-Schoenus apogon"
-Schoenus nitens"
-Viola hederacea"
-Acacia leiocalyx"
-Blechnum indicum"
-Casuarina glauca"
-Centipeda minima"
-Cladium procerum"
-Cynodon dactylon"
-Diplatia furcata"
-Ficus rubiginosa"
-Frequent species"
-Hakea florulenta"
-Juncus continuus"
-Leersia hexandra"
-Leptomeria acida"
-Livistona decora"
-Melaleuca nodosa"
-Pultenaea retusa"
-Smilax australis"
-Themeda triandra"
-Tricoryne anceps"
-Viminaria juncea"
-Woollsia pungens"
-Xanthosia pilosa"
-Xyris complanata"
-Zieria laxiflora"
-Acacia concurrens"
-Acacia flavescens"
-Acacia suaveolens"
-Acacia ulicifolia"
-Baloskion pallens"
-Baumea articulata"
-Calochlaena dubia"
-Cassytha glabella"
-Caustis recurvata"
-Centella asiatica"
-Dianella caerulea"
-Dianella congesta"
-Dillwynia retorta"
-Eclipta prostrata"
-Endiandra sieberi"
-Entolasia stricta"
-Epacris pulchella"
-Epaltes australis"
-Gahnia sieberiana"
-Hibbertia stricta"
-Hibbertia vestita"
-Leptocarpus tenax"
-Lomandra elongata"
-Marsdenia fraseri"
-Melaleuca cheelii"
-Melaleuca sieberi"
-Monotoca scoparia"
-Persoonia virgata"
-Phebalium woombye"
-Pimelea linifolia"
-Pterostylis indet"
-Pultenaea villosa"
-Strangea linearis"
-Styphelia viridis"
-Tricoryne elatior"
-Triodia marginata"
-Acacia hubbardiana"
-Acacia penninervis"
-Alphitonia excelsa"
-Astrotricha glabra"
-Baeckea frutescens"
-Boronia falcifolia"
-Cassytha pubescens"
-Corymbia gummifera"
-Dianella crinoides"
-Dodonaea triquetra"
-Entolasia whiteana"
-Eucalyptus exserta"
-Eucalyptus robusta"
-Fimbristylis indet"
-Hibbertia linearis"
-Hibbertia scandens"
-Hypolepis muelleri"
-Ischaemum australe"
-Jacksonia scoparia"
-Kennedia rubicunda"
-Laxmannia gracilis"
-Lepyrodia scariosa"
-Lomatia silaifolia"
-Macaranga tanarius"
-Melaleuca dealbata"
-Melicope elleryana"
-Paspalidium gausum"
-Patersonia sericea"
-Podolepis neglecta"
-Pultenaea paleacea"
-Restionaceae indet"
-Sacciolepis indica"
-Schizaea dichotoma"
-Scleria sphacelata"
-Smilax glyciphylla"
-Stephania japonica"
-Velleia spathulata"
-Villarsia exaltata"
-Xanthorrhoea fulva"
-Angophora leiocarpa"
-Austromyrtus dulcis"
-Cassytha filiformis"
-Coleocarya gracilis"
-Corymbia intermedia"
-Corymbia torelliana"
-Dampiera sylvestris"
-Epacris microphylla"
-Eriachne pallescens"
-Eriocaulon australe"
-Glycine clandestina"
-Hypericum gramineum"
-Imperata cylindrica"
-Leptospermum whitei"
-Leucopogon deformis"
-Leucopogon virgatus"
-Lindernia crustacea"
-Lobelia stenophylla"
-Lomandra filiformis"
-Lomandra longifolia"
-Lomandra multiflora"
-Ochrosperma lineare"
-Parsonsia straminea"
-Paspalidium gracile"
-Patersonia glabrata"
-Persicaria strigosa"
-Platysace ericoides"
-Pultenaea myrtoides"
-Stackhousia viminea"
-Acrotriche aggregata"
-Agiortia pedicellata"
-Baloskion tenuiculme"
-Banksia integrifolia"
-Banksia oblongifolia"
-Burchardia umbellata"
-Callitris rhomboidea"
-Chorizandra cymbaria"
-Commelina lanceolata"
-Corymbia tessellaris"
-Cyathochaeta diandra"
-Cymbopogon refractus"
-Cyperus polystachyos"
-Daviesia umbellulata"
-Dillwynia floribunda"
-Duboisia myoporoides"
-Eucalyptus pilularis"
-Exocarpos latifolius"
-Gleichenia mendellii"
-Grevillea leiophylla"
-Hibbertia acicularis"
-Homoranthus virgatus"
-Hydrocotyle paludosa"
-Hypolaena fastigiata"
-Lepironia articulata"
-Leucopogon ericoides"
-Melaleuca thymifolia"
-Melichrus procumbens"
-Ottochloa gracillima"
-Persicaria attenuata"
-Persicaria decipiens"
-Persoonia cornifolia"
-Petrophile canescens"
-Petrophile shirleyae"
-Phragmites australis"
-Phyllanthus virgatus"
-Phyllota phylicoides"
-Pteridium esculentum"
-Schoenus brevifolius"
-Aristida jerichoensis"
-Bossiaea heterophylla"
-Brachyloma daphnoides"
-Comesperma defoliatum"
-Crotalaria lanceolata"
-Cyanthillium cinereum"
-Eurychorda complanata"
-Glochidion ferdinandi"
-Glochidion lobocarpum"
-Glochidion sumatranum"
-Gompholobium pinnatum"
-Gompholobium virgatum"
-Hardenbergia violacea"
-Heteropogon contortus"
-Hibbertia fasciculata"
-Hibbertia salicifolia"
-Hydrilla verticillata"
-Jacksonia stackhousei"
-Lepidosperma laterale"
-Leucopogon margarodes"
-Lophostemon confertus"
-Lygodium microphyllum"
-Melaleuca pachyphylla"
-Mitrasacme polymorpha"
-Murraya paniculata cv"
-Pleiogynium timorense"
-Podocarpus spinulosus"
-Sporadanthus caudatus"
-Acacia quadrilateralis"
-Acronychia imperforata"
-Allocasuarina torulosa"
-Astrotricha longifolia"
-Baloskion tetraphyllum"
-Boronia rosmarinifolia"
-Callitris columellaris"
-Conospermum taxifolium"
-Cyclosorus interruptus"
-Hibiscus diversifolius"
-Leucopogon pimeleoides"
-Lophostemon suaveolens"
-Melaleuca linariifolia"
-Micromyrtus littoralis"
-Paspalum scrobiculatum"
-Platysace linearifolia"
-Pseudanthus orientalis"
-Schoenus melanostachys"
-Xanthorrhoea johnsonii"
-Elaeocarpus reticulatus"
-Eragrostis spartinoides"
-Eucalyptus latisinensis"
-Eucalyptus planchoniana"
-Eucalyptus tereticornis"
-Leptospermum trinervium"
-Melaleuca quinquenervia"
-Muellerina celastroides"
-Ricinocarpos pinifolius"
-Sansevieria trifasciata"
-Schefflera actinophylla"
-Allocasuarina littoralis"
-Dendrophthoe glabrescens"
-Desmodium rhytidophyllum"
-Exocarpos cupressiformis"
-Hydrocotyle verticillata"
-Leptospermum juniperinum"
-Leptospermum liversidgei"
-Persoonia stradbrokensis"
-Philotheca queenslandica"
-Alternanthera denticulata"
-Cupaniopsis anacardioides"
-Cyclophyllum coprosmoides"
-Leptospermum semibaccatum"
-Sprengelia sprengelioides"
-Leucopogon leptospermoides"
-Leptospermum polygalifolium"
-Trachystylis stradbrokensis"
-Caustis blakei subsp. blakei"!
-Patersonia sericea var. sericea"#
-!Jasminum didymum subsp. racemosum"%
-#Acacia disparrima subsp. disparrima"%
-#Eriachne pallescens var. pallescens"%
-#Eucalyptus racemosa subsp. racemosa"%
-#Hibbertia linearis var. obtusifolia"%
-#Lindsaea ensifolia subsp. ensifolia"%
-#Tricoryne anceps subsp. pterocaulon"(
-&Gonocarpus chinensis subsp. verrucosus")
-'Aristida jerichoensis var. jerichoensis"+
-)Gonocarpus micranthus subsp. ramosissimus"+
-)Viola betonicifolia subsp. novaguineensis".
-,Melastoma malabathricum subsp. malabathricum" ú" „”" ŒÇ" Ç" ’õ" ”õ" ›ó" œÃ" ¨è" ·Â" º¾" ×Ø" Ùİ§Â ³ ³+EF«¬	ğ
-iÒ§jkò®¯óÓÔô±J m!"K#‘$n%’&¶'”(¸)*M+o,¹-O.p/º01Q2R3•4S5–6¡7»8„9¢:s;<3=Ü>İ?Ş@¿AuBvCWDÀEÂFšGyH{IäJ7K›L˜M†NœOÄPšQåRøST¡U¢V}WæX9YÆZ][\£]^_¤`¦a‚bÊc“d^eËfÌgÏh`i¨jìkƒl&mşnĞobp‰q'r‰sctdu<vœw¥x?y€z@{B"İ	Ÿ†’&z>B œÜşò¢àRø;¢ Nb$4$H"\Î’²–¸ÊbÄ2„ÖĞ¾–€´vÔV†˜:ôÀ¶B(R>("<<2B¨ÌPd‚ ¿ ;CW[GKs;G“Í³É'£K?']U3ƒ5a#YIåq¹GO9EMgi{UI&-3/}7m««İQWeÙy4sBo	AS‡CqqS_Ÿµ £<: %3)5+i[h1 ¯ ¯,Õ"	•
-3U½áÃ’˜‡™"1	€À+Š„Z &2~840%.ai qç6‰  Y1 µ µ,Õ"	•
-3U½áÃ’˜‡™""	AĞ$r6.R6:)aG17Q
-Ip1 ° °,Õ"	•
-3U½áÃ’˜‡™"9	Ì	è0ºrºJæ$Zo3i!u
-9\!J?3=)7_2…Jn2%P-29W?„1 ¶ ¶,Õ"	•
-3U½áÃ’˜‡™"Ì	Ü8ğŠ4X$0½‚[L7$bg¨E®3¬‡&çå¢»øö›ª0æNªİÒ¾“„™è'ÎXæjöB!<3„N
-L"TËÉ‰•ëg›c¿.ßN‡¦õ|ƒXå8GráB`±º£\S¢Daê©ÌEUo _¶lk¦#NÊ3’Oe1 ´ ´,Õ"	•
-3U½áÃ’˜‡™".	ş9’Št
-,T
-š8†*ˆI[979-/?G
-E 9;3-+Š?pWZ1 ² ²,Õ"	•
-3U½áÃ’˜‡™"#	üæ?bX\eAVù 
-'ˆ!ŒÈ^J!
- ® ®"	Äü,¢b^Pj|Nh:FHPR@X1:O.1&mI1†`8*>4@"I:[v	j"p46b4„V(^L@(¤´Ê”Î<H€t.27I"]Ç‹‡"	(ë  • !è5r	ì„BUf<DŸÖ · ·C g+ï	Œ
-i•Gò®H,lôIJm-L.²/ Õ!’"´#Ö$–%×&µ'—(ö)¶*0+, -·.!/0M1N213p4P56R7T8‚9—:s;…<Ø=>¼?@2AtB3CDEUFÙGÚHÛI˜JÜK¦L¨M¾NO4PßQvRVSWT÷UâVÁWX™YwZš[\x]Ÿ^5_z`6aÃb‘c›d|ešføgh¤i#j8kŸl¡mænùoçp~qr[stúuèv‡w\xÅyªz€{é|]}ˆ~êÇ€$¤‚¥ƒ„ü…È†É‡§ˆ%‰“Š^‹ÍŒÎ`ıë‘Ğ’a“©”„•:–†—‹˜(™Ñšˆ›;œíªŠŸ< e¡‹¢Œ£>¤©¥*¦§A"Á	ÊŠ+šV4RqŞMˆ-àÀdhœìŠ–ÌÊ T~àHZ~Fû Cy#%7;7a/K#[aÑ5OGK½3µ“ié)­‘ÉJ}Ü×	Šïê6P† ´¬:nB6<&<p",,2B>@&< $0, ”G9 s@b”ˆºˆ¼  ’GK-?)G?G=+7E7!=-+3)'33%!7))‡7…	™+Ss	O&oX‰@C¡P4«F­h§€a8#\K¾/W#3+$‘PÉ4Mas48);/717/,/4A>)&#p=8&ŒÂ ± ±+EF«¬	ğ
-iÒ§jkò®¯óÓÔô±J m!"K#‘$n%’&¶'”(¸)*M+o,¹-O.p/º01Q2R3•4S5–6¡7»8„9¢:s;<3=Ü>İ?Ş@¿AuBvCWDÀEÂFšGyH{IäJ7K›L˜M†NœOÄPšQåRøST¡U¢V}WæX9YÆZ][\£]^_¤`¦a‚bÊc“d^eËfÌgÏh`i¨jìkƒl&mşnĞobp‰q'r‰sctdu<vœw¥x?y€z@{B"Â	 A J øŸÛ‡¹“at? :H	¡²/+#%;?=A1+!+o%;5;Am«9³… 5OC…;3k	;O;(12,J:25,C ;] U7[KSEASQ›)EM/U-%%=K;3Q(•"9Zo EKê
- , *Êº¨ªÔ’@`*@­
- ­ ­"œ	´7ĞÚ,4.:<F H	@0:.:8<H,>"8& 4  4*(4,.">8F,8 >H@‚*H.@HL öÕ }EGY}ßA§	KM4ƒ";AiõWå(Íšç”ƒ½ŞÑM©/åœ©‚õ¼÷æ¡èªuƒİ « «C Dg+	h
-îEFŒiñk
-G­®¯lóÓÔ° J!m"K#‘$Õ%³&õ'’(“)–*+,M-¹.p/0"1R2q3•4S5–6r7ƒ8¢9s:;3<=U>Ù?İ@AB¿CàDuE£FWGÀHšIãJ{KäLXM7N›O˜P†Q›RœSšTåUøVWYX Y¡Zæ[ù\Z]9^‡_\`ûa]bc£d¤efg“h^iÌj_k”lÏm`n¨oıp&qşrĞs	t…u‰vŠw‹x'y‡zÿ{)|™}c~<œ€=f‚?ƒ„€…B"	 AŸB ¾?_)‘?©Ó¹§)É+Ÿ¾İ ¬ ¬C Dg+	h
-îEFŒiñk
-G­®¯lóÓÔ° J!m"K#‘$Õ%³&õ'’(“)–*+,M-¹.p/0"1R2q3•4S5–6r7ƒ8¢9s:;3<=U>Ù?İ@AB¿CàDuE£FWGÀHšIãJ{KäLXM7N›O˜P†Q›RœSšTåUøVWYX Y¡Zæ[ù\Z]9^‡_\`ûa]bc£d¤efg“h^iÌj_k”lÏm`n¨oıp&qşrĞs	t…u‰vŠw‹x'y‡zÿ{)|™}c~<œ€=f‚?ƒ„€…B"Ù	Ÿ†Ú ¥ê1 LFYp!:'–R4<L&> &. 0VFNœ*RTBFT L\8V^ <D + 169I+1'2<P
-<4l<D†3%7o>%$=*3B+008280<7*3tCklµŸ`pVËFéªCb¡[T¹¤_²Aqâ7HWæ{„3˜3QUõ†ÛØI~€’Ê*®jê”4¶L¾H6PbÒ$\0L8b8<$&Dzã ŸOc§Ë1A;;'!Q=A'¿µ9ó…—UuÓÿ³½•ÕÏ1ƒaÃ·É±•Í‘![#G#3Ma<¡Q÷¡ßıñ›ÛAy=	%Ôš ¶T`rrDTˆ
-BAp3tzfÚRX¬Şn¬1Ÿ%YƒŸ 	^©r(	J8R2 bH*95Q-	“‹B ˆ4*&9;

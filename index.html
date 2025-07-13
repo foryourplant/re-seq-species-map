@@ -84,11 +84,14 @@
 
   <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
   <script>
+    //const base_ur = `http://plants.re/`;
+    const base_ur = "http://localhost:8000/";
+
     const map = new maplibregl.Map({
       container: "map",
       style: {
         version: 8,
-        glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+        //glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
         sources: {
           osm: {
             type: "raster",
@@ -98,9 +101,9 @@
           },
           species: {
             type: "vector",
-            tiles: ["https://foryourplant.github.io/re-seq-species-map/tiles/{z}/{x}/{y}.pbf"],
+            tiles: [`${base_ur}tiles/{z}/{x}/{y}.pbf`],
             minzoom: 0,
-            maxzoom: 14
+            maxzoom: 11
           }
         },
         layers: [
@@ -118,7 +121,27 @@
     });
 
     let marker;
-    let speciesGrowth = {};
+    let speciesLookup = {};
+
+    map.on("load", () => {
+    map.addSource("selected-polygon", {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: []
+      }
+    });
+
+    map.addLayer({
+      id: "species-outline",
+      type: "line",
+      source: "selected-polygon",
+      paint: {
+        "line-color": "#333333",
+        "line-width": 3
+      }
+    });
+  });
 
     function zoomToLocation(e) {
       e.preventDefault();
@@ -139,10 +162,15 @@
     }
 
     Promise.all([
-      fetch("https://foryourplant.github.io/re-seq-species-map/re-colours.json").then(r => r.json()),
-      fetch("https://foryourplant.github.io/re-seq-species-map/species_growth.json").then(r => r.json())
-    ]).then(([colorMap, growthData]) => {
-      speciesGrowth = growthData;
+      fetch(`${base_ur}re-colours.json`).then(r => r.json()),
+      fetch(`${base_ur}species.json`).then(r => r.json())
+    ]).then(([colorMap, speciesList]) => {
+      for (const entry of speciesList) {
+        speciesLookup[entry.id] = {
+          name: entry.species,
+          type: entry.type || "Unknown"
+        };
+      }
 
       const matchColors = ["match", ["get", "re"]];
       for (const re in colorMap) matchColors.push(re, colorMap[re]);
@@ -155,7 +183,7 @@
         "source-layer": "species_fields",
         paint: {
           "fill-color": matchColors,
-          "fill-opacity": 0.2
+          "fill-opacity": 0.3
         }
       });
 
@@ -169,45 +197,44 @@
         const coords = e.lngLat;
         const props = feature.properties;
 
+        map.getSource("selected-polygon").setData({
+          type: "FeatureCollection",
+          features: [feature]
+        });
+
         if (marker) marker.remove();
         marker = new maplibregl.Marker().setLngLat(coords).addTo(map);
 
-        const species = Object.keys(props)
-          .filter(k => k.startsWith("species_"))
-          .map(k => props[k])
-          .filter(v => v && v.trim() !== "");
-
-        const reCodes = props.re.split("/").map(code => code.trim());
-        const reLinks = reCodes.map(code => `<a href="https://apps.des.qld.gov.au/regional-ecosystems/details/?re=${encodeURIComponent(code)}" target="_blank">${code}</a>`).join(" / ");
+        const speciesIds = props.species_ids ? props.species_ids.split(",").map(s => s.trim()) : [];
 
         const grouped = {};
-        species.forEach(name => {
-          const key = name.trim().toLowerCase();
-          const form = speciesGrowth[key] || "unknown";
-          if (!grouped[form]) grouped[form] = [];
-          grouped[form].push(name);
-        });
+        for (const id of speciesIds) {
+          const s = speciesLookup[id];
+          if (!s) continue;
+          const type = s.type || "Unknown";
+          if (!grouped[type]) grouped[type] = [];
+          grouped[type].push(s.name);
+        }
 
-        const allKeys = Object.keys(grouped);
-        const preferredOrder = ["tree", "shrub", "herb", "grass", "vine"];
-        const remaining = allKeys.filter(k => !preferredOrder.includes(k));
-        const finalOrder = [...preferredOrder, ...remaining];
+        const reCodes = props.re?.split("/").map(code => code.trim()) || [];
+        const reLinks = reCodes.map(code => `<a href="https://apps.des.qld.gov.au/regional-ecosystems/details/?re=${encodeURIComponent(code)}" target="_blank">${code}</a>`).join(" / ");
+
+        const preferredOrder = ["Tree", "Shrub", "Herb", "Grass", "Vine"];
+        const allTypes = Object.keys(grouped);
+        const orderedTypes = [...preferredOrder, ...allTypes.filter(t => !preferredOrder.includes(t))];
 
         const infoDiv = document.getElementById("info");
-        let html = `<h3>RE ${reLinks}</h3><h4>Species List (${species.length})</h4>`;
+        let html = `<h3>RE ${reLinks}</h3><h4>Species List (${speciesIds.length})</h4>`;
 
-        finalOrder.forEach(type => {
+        for (const type of orderedTypes) {
           const list = grouped[type];
           if (list && list.length) {
-            const links = list
-              .map(s => `<a href="https://bie.ala.org.au/species/${encodeURIComponent(s)}" target="_blank">${s}</a>`)
-              .join(", ");
-            const emoji = {
-              tree: "", shrub: "", herb: "", grass: "", vine: ""
-            }[type.toLowerCase()] || "❓";
-            html += `<p><strong>${emoji} ${type.charAt(0).toUpperCase() + type.slice(1)}:</strong><br>${links}</p>`;
+            const links = list.map(name =>
+              `<a href="https://bie.ala.org.au/species/${encodeURIComponent(name)}" target="_blank">${name}</a>`
+            ).join(", ");
+            html += `<p><strong>${type}:</strong><br>${links}</p>`;
           }
-        });
+        }
 
         infoDiv.innerHTML = html;
       });
