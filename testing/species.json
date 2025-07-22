@@ -151,7 +151,7 @@
   },
   {
     "id": 31,
-    "species": "Acacia indet",
+    "species": "Acacia sp.",
     "type": "Unknown"
   },
   {
@@ -286,7 +286,7 @@
   },
   {
     "id": 58,
-    "species": "Acianthus indet",
+    "species": "Acianthus sp.",
     "type": "Herb"
   },
   {
@@ -356,7 +356,7 @@
   },
   {
     "id": 72,
-    "species": "Adiantum indet",
+    "species": "Adiantum sp.",
     "type": "Herb"
   },
   {
@@ -611,7 +611,7 @@
   },
   {
     "id": 123,
-    "species": "Aristida indet",
+    "species": "Aristida sp.",
     "type": "Grass"
   },
   {
@@ -726,7 +726,7 @@
   },
   {
     "id": 146,
-    "species": "Asparagus indet",
+    "species": "Asparagus sp.",
     "type": "Herb"
   },
   {
@@ -756,7 +756,7 @@
   },
   {
     "id": 152,
-    "species": "Asteraceae indet",
+    "species": "Asteraceae sp.",
     "type": "Unknown"
   },
   {
@@ -801,7 +801,7 @@
   },
   {
     "id": 161,
-    "species": "Austrodanthonia indet",
+    "species": "Austrodanthonia sp.",
     "type": "Grass"
   },
   {
@@ -816,7 +816,7 @@
   },
   {
     "id": 164,
-    "species": "Austrostipa indet",
+    "species": "Austrostipa sp.",
     "type": "Grass"
   },
   {
@@ -846,7 +846,7 @@
   },
   {
     "id": 170,
-    "species": "Bacopa indet",
+    "species": "Bacopa sp.",
     "type": "Herb"
   },
   {
@@ -856,7 +856,7 @@
   },
   {
     "id": 172,
-    "species": "Baeckea indet",
+    "species": "Baeckea sp.",
     "type": "Unknown"
   },
   {
@@ -866,7 +866,7 @@
   },
   {
     "id": 174,
-    "species": "Baloskion indet",
+    "species": "Baloskion sp.",
     "type": "Grass"
   },
   {
@@ -946,7 +946,7 @@
   },
   {
     "id": 190,
-    "species": "Baumea indet",
+    "species": "Baumea sp.",
     "type": "Grass"
   },
   {
@@ -1011,7 +1011,7 @@
   },
   {
     "id": 203,
-    "species": "Boronia indet",
+    "species": "Boronia sp.",
     "type": "Unknown"
   },
   {
@@ -1126,7 +1126,7 @@
   },
   {
     "id": 226,
-    "species": "Bryophyllum indet",
+    "species": "Bryophyllum sp.",
     "type": "Unknown"
   },
   {
@@ -1271,7 +1271,7 @@
   },
   {
     "id": 255,
-    "species": "Carex indet",
+    "species": "Carex sp.",
     "type": "Grass"
   },
   {
@@ -1316,7 +1316,7 @@
   },
   {
     "id": 264,
-    "species": "Cassytha indet",
+    "species": "Cassytha sp.",
     "type": "Vine"
   },
   {
@@ -1341,7 +1341,7 @@
   },
   {
     "id": 269,
-    "species": "Casuarina indet",
+    "species": "Casuarina sp.",
     "type": "Unknown"
   },
   {
@@ -1626,7 +1626,7 @@
   },
   {
     "id": 326,
-    "species": "Conyza indet",
+    "species": "Conyza sp.",
     "type": "Herb"
   },
   {
@@ -1661,7 +1661,7 @@
   },
   {
     "id": 333,
-    "species": "Corybas indet",
+    "species": "Corybas sp.",
     "type": "Herb"
   },
   {
@@ -1716,7 +1716,7 @@
   },
   {
     "id": 344,
-    "species": "Crotalaria indet",
+    "species": "Crotalaria sp.",
     "type": "Unknown"
   },
   {
@@ -1856,7 +1856,7 @@
   },
   {
     "id": 372,
-    "species": "Cyathea indet",
+    "species": "Cyathea sp.",
     "type": "Unknown"
   },
   {
@@ -1976,7 +1976,7 @@
   },
   {
     "id": 396,
-    "species": "Cyperus indet",
+    "species": "Cyperus sp.",
     "type": "Grass"
   },
   {
@@ -2096,7 +2096,7 @@
   },
   {
     "id": 420,
-    "species": "Dendrobium indet",
+    "species": "Dendrobium sp.",
     "type": "Herb"
   },
   {
@@ -2166,7 +2166,7 @@
   },
   {
     "id": 434,
-    "species": "Desmodium indet",
+    "species": "Desmodium sp.",
     "type": "Unknown"
   },
   {
@@ -2211,7 +2211,7 @@
   },
   {
     "id": 443,
-    "species": "Dianella indet",
+    "species": "Dianella sp.",
     "type": "Grass"
   },
   {
@@ -2261,7 +2261,7 @@
   },
   {
     "id": 453,
-    "species": "Dichelachne indet",
+    "species": "Dichelachne sp.",
     "type": "Grass"
   },
   {
@@ -2306,7 +2306,7 @@
   },
   {
     "id": 462,
-    "species": "Digitaria indet",
+    "species": "Digitaria sp.",
     "type": "Grass"
   },
   {
@@ -2396,7 +2396,7 @@
   },
   {
     "id": 480,
-    "species": "Dipodium indet",
+    "species": "Dipodium sp.",
     "type": "Herb"
   },
   {
@@ -2576,7 +2576,7 @@
   },
   {
     "id": 516,
-    "species": "Echium indet",
+    "species": "Echium sp.",
     "type": "Unknown"
   },
   {
@@ -2591,7 +2591,7 @@
   },
   {
     "id": 519,
-    "species": "Einadia indet",
+    "species": "Einadia sp.",
     "type": "Unknown"
   },
   {
@@ -2706,7 +2706,7 @@
   },
   {
     "id": 542,
-    "species": "Entolasia indet",
+    "species": "Entolasia sp.",
     "type": "Grass"
   },
   {
@@ -2756,7 +2756,7 @@
   },
   {
     "id": 552,
-    "species": "Eragrostis indet",
+    "species": "Eragrostis sp.",
     "type": "Grass"
   },
   {
@@ -2811,7 +2811,7 @@
   },
   {
     "id": 563,
-    "species": "Eremophila indet",
+    "species": "Eremophila sp.",
     "type": "Unknown"
   },
   {
@@ -3061,7 +3061,7 @@
   },
   {
     "id": 613,
-    "species": "Euphorbia indet",
+    "species": "Euphorbia sp.",
     "type": "Unknown"
   },
   {
@@ -3181,7 +3181,7 @@
   },
   {
     "id": 637,
-    "species": "Fimbristylis indet",
+    "species": "Fimbristylis sp.",
     "type": "Grass"
   },
   {
@@ -3336,7 +3336,7 @@
   },
   {
     "id": 669,
-    "species": "Glycine indet",
+    "species": "Glycine sp.",
     "type": "Vine"
   },
   {
@@ -3361,12 +3361,12 @@
   },
   {
     "id": 674,
-    "species": "Gnaphalium indet",
+    "species": "Gnaphalium sp.",
     "type": "Herb"
   },
   {
     "id": 675,
-    "species": "Gompholobium indet",
+    "species": "Gompholobium sp.",
     "type": "Unknown"
   },
   {
@@ -3436,7 +3436,7 @@
   },
   {
     "id": 689,
-    "species": "Goodenia indet",
+    "species": "Goodenia sp.",
     "type": "Unknown"
   },
   {
@@ -3601,7 +3601,7 @@
   },
   {
     "id": 722,
-    "species": "Hibbertia indet",
+    "species": "Hibbertia sp.",
     "type": "Unknown"
   },
   {
@@ -3731,7 +3731,7 @@
   },
   {
     "id": 748,
-    "species": "Hybanthus indet",
+    "species": "Hybanthus sp.",
     "type": "Unknown"
   },
   {
@@ -3756,7 +3756,7 @@
   },
   {
     "id": 753,
-    "species": "Hydrocotyle indet",
+    "species": "Hydrocotyle sp.",
     "type": "Herb"
   },
   {
@@ -3806,7 +3806,7 @@
   },
   {
     "id": 763,
-    "species": "Hypolepis indet",
+    "species": "Hypolepis sp.",
     "type": "Unknown"
   },
   {
@@ -3846,7 +3846,7 @@
   },
   {
     "id": 771,
-    "species": "Indigofera indet",
+    "species": "Indigofera sp.",
     "type": "Unknown"
   },
   {
@@ -3886,7 +3886,7 @@
   },
   {
     "id": 779,
-    "species": "Ischaemum indet",
+    "species": "Ischaemum sp.",
     "type": "Grass"
   },
   {
@@ -3951,7 +3951,7 @@
   },
   {
     "id": 792,
-    "species": "Juncus indet",
+    "species": "Juncus sp.",
     "type": "Grass"
   },
   {
@@ -4011,12 +4011,12 @@
   },
   {
     "id": 804,
-    "species": "Lepidium indet",
+    "species": "Lepidium sp.",
     "type": "Grass"
   },
   {
     "id": 805,
-    "species": "Lepidosperma indet",
+    "species": "Lepidosperma sp.",
     "type": "Grass"
   },
   {
@@ -4061,7 +4061,7 @@
   },
   {
     "id": 814,
-    "species": "Leptochloa indet",
+    "species": "Leptochloa sp.",
     "type": "Grass"
   },
   {
@@ -4071,7 +4071,7 @@
   },
   {
     "id": 816,
-    "species": "Leptospermum indet",
+    "species": "Leptospermum sp.",
     "type": "Unknown"
   },
   {
@@ -4116,7 +4116,7 @@
   },
   {
     "id": 825,
-    "species": "Lepyrodia indet",
+    "species": "Lepyrodia sp.",
     "type": "Grass"
   },
   {
@@ -4151,7 +4151,7 @@
   },
   {
     "id": 832,
-    "species": "Leucopogon indet",
+    "species": "Leucopogon sp.",
     "type": "Unknown"
   },
   {
@@ -4441,7 +4441,7 @@
   },
   {
     "id": 890,
-    "species": "Malvaceae indet",
+    "species": "Malvaceae sp.",
     "type": "Unknown"
   },
   {
@@ -4466,7 +4466,7 @@
   },
   {
     "id": 895,
-    "species": "Marsdenia indet",
+    "species": "Marsdenia sp.",
     "type": "Vine"
   },
   {
@@ -4486,7 +4486,7 @@
   },
   {
     "id": 899,
-    "species": "Marsilea indet",
+    "species": "Marsilea sp.",
     "type": "Herb"
   },
   {
@@ -4511,7 +4511,7 @@
   },
   {
     "id": 904,
-    "species": "Maytenus indet",
+    "species": "Maytenus sp.",
     "type": "Unknown"
   },
   {
@@ -4681,7 +4681,7 @@
   },
   {
     "id": 938,
-    "species": "Mirbelia indet",
+    "species": "Mirbelia sp.",
     "type": "Shrub"
   },
   {
@@ -4711,7 +4711,7 @@
   },
   {
     "id": 944,
-    "species": "Monotoca indet",
+    "species": "Monotoca sp.",
     "type": "Shrub"
   },
   {
@@ -4781,7 +4781,7 @@
   },
   {
     "id": 958,
-    "species": "Myriophyllum indet",
+    "species": "Myriophyllum sp.",
     "type": "Herb"
   },
   {
@@ -4836,7 +4836,7 @@
   },
   {
     "id": 969,
-    "species": "Neptunia indet",
+    "species": "Neptunia sp.",
     "type": "Unknown"
   },
   {
@@ -4866,7 +4866,7 @@
   },
   {
     "id": 975,
-    "species": "Nymphoides indet",
+    "species": "Nymphoides sp.",
     "type": "Herb"
   },
   {
@@ -4936,7 +4936,7 @@
   },
   {
     "id": 989,
-    "species": "Opuntia indet",
+    "species": "Opuntia sp.",
     "type": "Shrub"
   },
   {
@@ -4946,7 +4946,7 @@
   },
   {
     "id": 991,
-    "species": "Orchidaceae indet",
+    "species": "Orchidaceae sp.",
     "type": "Herb"
   },
   {
@@ -4981,7 +4981,7 @@
   },
   {
     "id": 998,
-    "species": "Oxalis indet",
+    "species": "Oxalis sp.",
     "type": "Herb"
   },
   {
@@ -5001,7 +5001,7 @@
   },
   {
     "id": 1002,
-    "species": "Oxylobium indet",
+    "species": "Oxylobium sp.",
     "type": "Shrub"
   },
   {
@@ -5021,7 +5021,7 @@
   },
   {
     "id": 1006,
-    "species": "Pandorea indet",
+    "species": "Pandorea sp.",
     "type": "Vine"
   },
   {
@@ -5086,7 +5086,7 @@
   },
   {
     "id": 1019,
-    "species": "Parsonsia indet",
+    "species": "Parsonsia sp.",
     "type": "Vine"
   },
   {
@@ -5141,7 +5141,7 @@
   },
   {
     "id": 1030,
-    "species": "Paspalidium indet",
+    "species": "Paspalidium sp.",
     "type": "Grass"
   },
   {
@@ -5151,7 +5151,7 @@
   },
   {
     "id": 1032,
-    "species": "Paspalum indet",
+    "species": "Paspalum sp.",
     "type": "Grass"
   },
   {
@@ -5176,7 +5176,7 @@
   },
   {
     "id": 1037,
-    "species": "Passiflora indet",
+    "species": "Passiflora sp.",
     "type": "Vine"
   },
   {
@@ -5251,7 +5251,7 @@
   },
   {
     "id": 1052,
-    "species": "Persicaria indet",
+    "species": "Persicaria sp.",
     "type": "Unknown"
   },
   {
@@ -5351,7 +5351,7 @@
   },
   {
     "id": 1072,
-    "species": "Phyllanthus indet",
+    "species": "Phyllanthus sp.",
     "type": "Unknown"
   },
   {
@@ -5521,7 +5521,7 @@
   },
   {
     "id": 1106,
-    "species": "Poa indet",
+    "species": "Poa sp.",
     "type": "Grass"
   },
   {
@@ -5546,7 +5546,7 @@
   },
   {
     "id": 1111,
-    "species": "Poaceae indet",
+    "species": "Poaceae sp.",
     "type": "Grass"
   },
   {
@@ -5751,7 +5751,7 @@
   },
   {
     "id": 1152,
-    "species": "Pterostylis indet",
+    "species": "Pterostylis sp.",
     "type": "Herb"
   },
   {
@@ -5846,17 +5846,17 @@
   },
   {
     "id": 1171,
-    "species": "Ranunculus indet",
+    "species": "Ranunculus sp.",
     "type": "Herb"
   },
   {
     "id": 1172,
-    "species": "Restio indet",
+    "species": "Restio sp.",
     "type": "Grass"
   },
   {
     "id": 1173,
-    "species": "Restionaceae indet",
+    "species": "Restionaceae sp.",
     "type": "Grass"
   },
   {
@@ -5876,7 +5876,7 @@
   },
   {
     "id": 1177,
-    "species": "Rhodomyrtus indet",
+    "species": "Rhodomyrtus sp.",
     "type": "Unknown"
   },
   {
@@ -5991,7 +5991,7 @@
   },
   {
     "id": 1200,
-    "species": "Sarcochilus indet",
+    "species": "Sarcochilus sp.",
     "type": "Herb"
   },
   {
@@ -6101,7 +6101,7 @@
   },
   {
     "id": 1222,
-    "species": "Scleria indet",
+    "species": "Scleria sp.",
     "type": "Grass"
   },
   {
@@ -6276,7 +6276,7 @@
   },
   {
     "id": 1257,
-    "species": "Solanum indet",
+    "species": "Solanum sp.",
     "type": "Unknown"
   },
   {
@@ -6306,7 +6306,7 @@
   },
   {
     "id": 1263,
-    "species": "Spermacoce indet",
+    "species": "Spermacoce sp.",
     "type": "Unknown"
   },
   {
@@ -6316,7 +6316,7 @@
   },
   {
     "id": 1265,
-    "species": "Spirodela indet",
+    "species": "Spirodela sp.",
     "type": "Herb"
   },
   {
@@ -6346,7 +6346,7 @@
   },
   {
     "id": 1271,
-    "species": "Sporobolus indet",
+    "species": "Sporobolus sp.",
     "type": "Grass"
   },
   {
@@ -6436,7 +6436,7 @@
   },
   {
     "id": 1289,
-    "species": "Stylosanthes indet",
+    "species": "Stylosanthes sp.",
     "type": "Unknown"
   },
   {
@@ -6456,7 +6456,7 @@
   },
   {
     "id": 1293,
-    "species": "Swainsona indet",
+    "species": "Swainsona sp.",
     "type": "Unknown"
   },
   {
@@ -6496,7 +6496,7 @@
   },
   {
     "id": 1301,
-    "species": "Tephrosia indet",
+    "species": "Tephrosia sp.",
     "type": "Unknown"
   },
   {
@@ -6686,7 +6686,7 @@
   },
   {
     "id": 1339,
-    "species": "Verbena indet",
+    "species": "Verbena sp.",
     "type": "Unknown"
   },
   {
@@ -6771,7 +6771,7 @@
   },
   {
     "id": 1356,
-    "species": "Wahlenbergia indet",
+    "species": "Wahlenbergia sp.",
     "type": "Herb"
   },
   {
