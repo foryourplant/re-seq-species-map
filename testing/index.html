@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>SEQ Plants</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: system-ui, sans-serif;
+    }
+    #container {
+      display: flex;
+      height: 100%;
+      flex-direction: row;
+    }
+    #map-container {
+      flex: 2;
+      position: relative;
+    }
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+    #sidebar {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border-left: 1px solid #ccc;
+    }
+    .zoom-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+    }
+    @media (max-width: 768px) {
+      #container {
+        flex-direction: column;
+      }
+      #map-container {
+        height: 50%;
+      }
+      #sidebar {
+        height: 50%;
+        border-left: none;
+        border-top: 1px solid #ccc;
+      }
+      .zoom-btn {
+        bottom: 10px;
+        top: auto;
+      }
+    }
+    .species-list {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="map-container">
+      <div id="map"></div>
+      <button class="btn btn-primary zoom-btn" onclick="zoomToLocation(event)">
+        Zoom to my location
+      </button>
+    </div>
+    <div id="sidebar">
+      <div class="content">
+        <h2>Based on pre-clearing regional ecosystems</h2>
+        <p>Click an area to see a list of associated plant species, grouped by growth habit. Some weed species have not been removed yet.</p>
+        <hr />
+        <div id="info">
+          <em>Click on the map to see species...</em>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+  <script>
+    const base_ur = `https://plants.re/`;
+    //const base_ur = "http://localhost:8000/";
+    //
+    
+    const map = new maplibregl.Map({
+      container: "map",
+      style: {
+        version: 8,
+        //glyphs: "https://demotiles.maplibre.org/font/{fontstack}/{range}.pbf",
+        sources: {
+          osm: {
+            type: "raster",
+            tiles: ["https://a.tile.openstreetmap.org/{z}/{x}/{y}.png"],
+            tileSize: 256,
+            attribution: "© OpenStreetMap contributors"
+          },
+          species: {
+            type: "vector",
+            tiles: [`${base_ur}tiles/{z}/{x}/{y}.pbf`],
+            minzoom: 0,
+            maxzoom: 11
+          }
+        },
+        layers: [
+          {
+            id: "osm-base",
+            type: "raster",
+            source: "osm",
+            minzoom: 0,
+            maxzoom: 22
+          }
+        ]
+      },
+      center: [153.0626048, -27.5808256],
+      zoom: 10
+    });
+
+    let marker;
+    let speciesLookup = {};
+
+    map.on("load", () => {
+    map.addSource("selected-polygon", {
+      type: "geojson",
+      data: {
+        type: "FeatureCollection",
+        features: []
+      }
+    });
+
+    map.addLayer({
+      id: "species-outline",
+      type: "line",
+      source: "selected-polygon",
+      paint: {
+        "line-color": "#333333",
+        "line-width": 3
+      }
+    });
+  });
+
+    function zoomToLocation(e) {
+      e.preventDefault();
+      if (!navigator.geolocation) {
+        alert("Geolocation not supported by your browser.");
+        return;
+      }
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lng = position.coords.longitude;
+          const lat = position.coords.latitude;
+          map.flyTo({ center: [lng, lat], zoom: 14 });
+        },
+        () => {
+          alert("Unable to retrieve your location.");
+        }
+      );
+    }
+
+    Promise.all([
+      fetch(`${base_ur}re-colours.json`).then(r => r.json()),
+      fetch(`${base_ur}species.json`).then(r => r.json())
+    ]).then(([colorMap, speciesList]) => {
+      for (const entry of speciesList) {
+        speciesLookup[entry.id] = {
+          name: entry.species,
+          type: entry.type || "Unknown"
+        };
+      }
+
+      const matchColors = ["match", ["get", "re"]];
+      for (const re in colorMap) matchColors.push(re, colorMap[re]);
+      matchColors.push("#cccccc");
+
+      map.addLayer({
+        id: "species-fill",
+        type: "fill",
+        source: "species",
+        "source-layer": "species_fields",
+        paint: {
+          "fill-color": matchColors,
+          "fill-opacity": 0.3
+        }
+      });
+
+      map.on("click", (e) => {
+        const features = map.queryRenderedFeatures(e.point, {
+          layers: ["species-fill"]
+        });
+        if (!features.length) return;
+
+        const feature = features[0];
+        const coords = e.lngLat;
+        const props = feature.properties;
+
+        map.getSource("selected-polygon").setData({
+          type: "FeatureCollection",
+          features: [feature]
+        });
+
+        if (marker) marker.remove();
+        marker = new maplibregl.Marker().setLngLat(coords).addTo(map);
+
+        const speciesIds = props.species_ids ? props.species_ids.split(",").map(s => s.trim()) : [];
+
+        const grouped = {};
+        for (const id of speciesIds) {
+          const s = speciesLookup[id];
+          if (!s) continue;
+          const type = s.type || "Unknown";
+          if (!grouped[type]) grouped[type] = [];
+          grouped[type].push(s.name);
+        }
+
+        const reCodes = props.re?.split("/").map(code => code.trim()) || [];
+        const reLinks = reCodes.map(code => `<a href="https://apps.des.qld.gov.au/regional-ecosystems/details/?re=${encodeURIComponent(code)}" target="_blank">${code}</a>`).join(" / ");
+
+        const preferredOrder = ["Tree", "Shrub", "Herb", "Grass", "Vine"];
+        const allTypes = Object.keys(grouped);
+        const orderedTypes = [...preferredOrder, ...allTypes.filter(t => !preferredOrder.includes(t))];
+
+        const infoDiv = document.getElementById("info");
+        let html = `<h3>RE ${reLinks}</h3><h4>Species List (${speciesIds.length})</h4>`;
+
+        for (const type of orderedTypes) {
+          const list = grouped[type];
+          if (list && list.length) {
+            const links = list.map(name =>
+              `<a href="https://bie.ala.org.au/species/${encodeURIComponent(name)}" target="_blank">${name}</a>`
+            ).join(", ");
+            html += `<p><strong>${type}:</strong><br>${links}</p>`;
+          }
+        }
+
+        infoDiv.innerHTML = html;
+      });
+
+      map.addControl(new maplibregl.NavigationControl());
+    });
+  </script>
+</body>
+</html>
