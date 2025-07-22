@@ -211,7 +211,7 @@
         const grouped = {};
         for (const id of speciesIds) {
           const s = speciesLookup[id];
-          if (!s) continue;
+          if (!s || s.name.endsWith("*")) continue;
           const type = s.type || "Unknown";
           if (!grouped[type]) grouped[type] = [];
           grouped[type].push(s.name);
