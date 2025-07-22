@@ -1666,7 +1666,7 @@
   },
   {
     "id": 334,
-    "species": "Blakella citriodora",
+    "species": "Corymbia citriodora",
     "type": "Tree"
   },
   {
@@ -1686,7 +1686,7 @@
   },
   {
     "id": 338,
-    "species": "Blakella henryi",
+    "species": "Corymbia henryi",
     "type": "Tree"
   },
   {
@@ -1696,12 +1696,12 @@
   },
   {
     "id": 340,
-    "species": "Blakella tessellaris",
+    "species": "Corymbia tessellaris",
     "type": "Tree"
   },
   {
     "id": 341,
-    "species": "Blakella torelliana*",
+    "species": "Corymbia torelliana*",
     "type": "Tree"
   },
   {
