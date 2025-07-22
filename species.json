@@ -32,7 +32,7 @@
   {
     "id": 7,
     "species": "Abutilon oxycarpum forma",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 8,
@@ -52,7 +52,7 @@
   {
     "id": 11,
     "species": "Acacia bidwillii",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 12,
@@ -287,7 +287,7 @@
   {
     "id": 58,
     "species": "Acianthus indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 59,
@@ -297,7 +297,7 @@
   {
     "id": 60,
     "species": "Acmena smithii",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 61,
@@ -357,7 +357,7 @@
   {
     "id": 72,
     "species": "Adiantum indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 73,
@@ -472,17 +472,17 @@
   {
     "id": 95,
     "species": "Alyxia ilicifolia subsp. magnifolia",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 96,
     "species": "Alyxia ruscifolia",
-    "type": "Tree"
+    "type": "Shrub"
   },
   {
     "id": 97,
     "species": "Alyxia ruscifolia subsp. ruscifolia",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 98,
@@ -532,7 +532,7 @@
   {
     "id": 107,
     "species": "Anisomeles malabarica",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 108,
@@ -612,7 +612,7 @@
   {
     "id": 123,
     "species": "Aristida indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 124,
@@ -697,7 +697,7 @@
   {
     "id": 140,
     "species": "Arthropodium paniculatum",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 141,
@@ -717,17 +717,17 @@
   {
     "id": 144,
     "species": "Asparagus aethiopicus",
-    "type": "Shrub"
+    "type": "Herb"
   },
   {
     "id": 145,
     "species": "Asparagus aethiopicus cv",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 146,
     "species": "Asparagus indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 147,
@@ -742,7 +742,7 @@
   {
     "id": 149,
     "species": "Asplenium bulbiferum subsp. gracillimum",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 150,
@@ -802,7 +802,7 @@
   {
     "id": 161,
     "species": "Austrodanthonia indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 162,
@@ -817,7 +817,7 @@
   {
     "id": 164,
     "species": "Austrostipa indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 165,
@@ -837,7 +837,7 @@
   {
     "id": 168,
     "species": "Babingtonia similis",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 169,
@@ -847,7 +847,7 @@
   {
     "id": 170,
     "species": "Bacopa indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 171,
@@ -867,7 +867,7 @@
   {
     "id": 174,
     "species": "Baloskion indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 175,
@@ -947,22 +947,22 @@
   {
     "id": 190,
     "species": "Baumea indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 191,
     "species": "Baumea juncea",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 192,
     "species": "Baumea rubiginosa",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 193,
     "species": "Baumea teretifolia",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 194,
@@ -972,7 +972,7 @@
   {
     "id": 195,
     "species": "Bidens pilosa var. pilosa",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 196,
@@ -982,7 +982,7 @@
   {
     "id": 197,
     "species": "Billardiera scandens var. scandens",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 198,
@@ -992,7 +992,7 @@
   {
     "id": 199,
     "species": "Blechnum indicum",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 200,
@@ -1152,7 +1152,7 @@
   {
     "id": 231,
     "species": "Bursaria incana var. incana",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 232,
@@ -1187,12 +1187,12 @@
   {
     "id": 238,
     "species": "Caldcluvia paniculosa",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 239,
     "species": "Callerya megasperma",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 240,
@@ -1272,7 +1272,7 @@
   {
     "id": 255,
     "species": "Carex indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 256,
@@ -1317,7 +1317,7 @@
   {
     "id": 264,
     "species": "Cassytha indet",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 265,
@@ -1372,7 +1372,7 @@
   {
     "id": 275,
     "species": "Celastrus subspicata",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 276,
@@ -1427,7 +1427,7 @@
   {
     "id": 286,
     "species": "Chamaesyce macgillivrayi",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 287,
@@ -1597,7 +1597,7 @@
   {
     "id": 320,
     "species": "Comesperma hispidulum",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 321,
@@ -1627,7 +1627,7 @@
   {
     "id": 326,
     "species": "Conyza indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 327,
@@ -1662,7 +1662,7 @@
   {
     "id": 333,
     "species": "Corybas indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 334,
@@ -1672,7 +1672,7 @@
   {
     "id": 335,
     "species": "Corymbia citriodora subsp. variegata",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 336,
@@ -1707,12 +1707,12 @@
   {
     "id": 342,
     "species": "Corymbia trachyphloia subsp. trachyphloia",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 343,
     "species": "Crassula sieberiana subsp. sieberiana",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 344,
@@ -1912,7 +1912,7 @@
   {
     "id": 383,
     "species": "Cynanchum bowmanii",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 384,
@@ -1922,7 +1922,7 @@
   {
     "id": 385,
     "species": "Cyperus bowmannii",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 386,
@@ -1977,7 +1977,7 @@
   {
     "id": 396,
     "species": "Cyperus indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 397,
@@ -2052,7 +2052,7 @@
   {
     "id": 411,
     "species": "Davallia pyxidata",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 412,
@@ -2097,7 +2097,7 @@
   {
     "id": 420,
     "species": "Dendrobium indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 421,
@@ -2132,37 +2132,37 @@
   {
     "id": 427,
     "species": "Derris involuta",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 428,
     "species": "Desmodium brachypodum",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 429,
     "species": "Desmodium gangeticum",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 430,
     "species": "Desmodium gunnii",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 431,
     "species": "Desmodium heterocarpon",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 432,
     "species": "Desmodium heterocarpon subsp. angustifolium",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 433,
     "species": "Desmodium heterocarpon var. heterocarpon",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 434,
@@ -2212,7 +2212,7 @@
   {
     "id": 443,
     "species": "Dianella indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 444,
@@ -2262,7 +2262,7 @@
   {
     "id": 453,
     "species": "Dichelachne indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 454,
@@ -2272,7 +2272,7 @@
   {
     "id": 455,
     "species": "Dichelachne sp",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 456,
@@ -2307,7 +2307,7 @@
   {
     "id": 462,
     "species": "Digitaria indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 463,
@@ -2397,7 +2397,7 @@
   {
     "id": 480,
     "species": "Dipodium indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 481,
@@ -2457,22 +2457,22 @@
   {
     "id": 492,
     "species": "Doodia aspera",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 493,
     "species": "Doodia caudata",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 494,
     "species": "Doodia heterophylla",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 495,
     "species": "Doodia media",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 496,
@@ -2567,7 +2567,7 @@
   {
     "id": 514,
     "species": "Echinopogon ovatus var. ovatus",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 515,
@@ -2647,7 +2647,7 @@
   {
     "id": 530,
     "species": "Elymus scaber",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 531,
@@ -2707,7 +2707,7 @@
   {
     "id": 542,
     "species": "Entolasia indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 543,
@@ -2747,7 +2747,7 @@
   {
     "id": 550,
     "species": "Epaltes australis",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 551,
@@ -2757,7 +2757,7 @@
   {
     "id": 552,
     "species": "Eragrostis indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 553,
@@ -2877,7 +2877,7 @@
   {
     "id": 576,
     "species": "Eucalyptus biturbinata",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 577,
@@ -2897,7 +2897,7 @@
   {
     "id": 580,
     "species": "Eucalyptus crebra x",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 581,
@@ -2977,7 +2977,7 @@
   {
     "id": 596,
     "species": "Eucalyptus montivaga",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 597,
@@ -2992,7 +2992,7 @@
   {
     "id": 599,
     "species": "Eucalyptus portuensis",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 600,
@@ -3002,7 +3002,7 @@
   {
     "id": 601,
     "species": "Eucalyptus racemosa subsp. racemosa",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 602,
@@ -3017,7 +3017,7 @@
   {
     "id": 604,
     "species": "Eucalyptus robusta x",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 605,
@@ -3077,17 +3077,17 @@
   {
     "id": 616,
     "species": "Euroschinus falcatus",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 617,
     "species": "Euroschinus falcatus var. angustifolius",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 618,
     "species": "Euroschinus falcatus var. falcatus",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 619,
@@ -3182,7 +3182,7 @@
   {
     "id": 637,
     "species": "Fimbristylis indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 638,
@@ -3202,7 +3202,7 @@
   {
     "id": 641,
     "species": "Fitzalania bidwillii",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 642,
@@ -3222,7 +3222,7 @@
   {
     "id": 645,
     "species": "Flindersia bennettiana",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 646,
@@ -3272,7 +3272,7 @@
   {
     "id": 656,
     "species": "Geissois benthamii",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 657,
@@ -3322,12 +3322,12 @@
   {
     "id": 666,
     "species": "Glycine clandestina var. clandestina",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 667,
     "species": "Glycine clandestina var. sericea",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 668,
@@ -3337,7 +3337,7 @@
   {
     "id": 669,
     "species": "Glycine indet",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 670,
@@ -3362,7 +3362,7 @@
   {
     "id": 674,
     "species": "Gnaphalium indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 675,
@@ -3387,7 +3387,7 @@
   {
     "id": 679,
     "species": "Gompholobium virgatum var. virgatum",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 680,
@@ -3532,7 +3532,7 @@
   {
     "id": 708,
     "species": "Hakea plurinervia",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 709,
@@ -3542,7 +3542,7 @@
   {
     "id": 710,
     "species": "Halosarcia indica",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 711,
@@ -3562,7 +3562,7 @@
   {
     "id": 714,
     "species": "Helichrysum elatum",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 715,
@@ -3612,7 +3612,7 @@
   {
     "id": 724,
     "species": "Hibbertia linearis var. obtusifolia",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 725,
@@ -3682,7 +3682,7 @@
   {
     "id": 738,
     "species": "Homalanthus nutans",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 739,
@@ -3727,7 +3727,7 @@
   {
     "id": 747,
     "species": "Hybanthus enneaspermus",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 748,
@@ -3742,7 +3742,7 @@
   {
     "id": 750,
     "species": "Hybanthus stellarioides",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 751,
@@ -3757,7 +3757,7 @@
   {
     "id": 753,
     "species": "Hydrocotyle indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 754,
@@ -3797,7 +3797,7 @@
   {
     "id": 761,
     "species": "Hypochaeris microcephala var. albiflora",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 762,
@@ -3887,7 +3887,7 @@
   {
     "id": 779,
     "species": "Ischaemum indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 780,
@@ -3907,7 +3907,7 @@
   {
     "id": 783,
     "species": "Jagera pseudorhus forma",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 784,
@@ -3952,7 +3952,7 @@
   {
     "id": 792,
     "species": "Juncus indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 793,
@@ -3982,12 +3982,12 @@
   {
     "id": 798,
     "species": "Lantana camara var. camara",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 799,
     "species": "Lastreopsis decomposita",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 800,
@@ -4012,12 +4012,12 @@
   {
     "id": 804,
     "species": "Lepidium indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 805,
     "species": "Lepidosperma indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 806,
@@ -4027,7 +4027,7 @@
   {
     "id": 807,
     "species": "Lepidosperma laterale var. laterale",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 808,
@@ -4047,22 +4047,22 @@
   {
     "id": 811,
     "species": "Leptochloa decipiens",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 812,
     "species": "Leptochloa decipiens subsp. decipiens",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 813,
     "species": "Leptochloa decipiens subsp. peacockii",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 814,
     "species": "Leptochloa indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 815,
@@ -4117,7 +4117,7 @@
   {
     "id": 825,
     "species": "Lepyrodia indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 826,
@@ -4132,22 +4132,22 @@
   {
     "id": 828,
     "species": "Lespedeza juncea subsp. sericea",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 829,
     "species": "Leucopogon biflorus",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 830,
     "species": "Leucopogon deformis",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 831,
     "species": "Leucopogon ericoides",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 832,
@@ -4157,7 +4157,7 @@
   {
     "id": 833,
     "species": "Leucopogon juniperinus",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 834,
@@ -4167,7 +4167,7 @@
   {
     "id": 835,
     "species": "Leucopogon margarodes",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 836,
@@ -4182,7 +4182,7 @@
   {
     "id": 838,
     "species": "Leucopogon trichostylus",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 839,
@@ -4202,7 +4202,7 @@
   {
     "id": 842,
     "species": "Lindernia crustacea",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 843,
@@ -4257,7 +4257,7 @@
   {
     "id": 853,
     "species": "Lobelia alata",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 854,
@@ -4352,7 +4352,7 @@
   {
     "id": 872,
     "species": "Lophostemon confertus x",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 873,
@@ -4377,12 +4377,12 @@
   {
     "id": 877,
     "species": "Lycopersicon esculentum",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 878,
     "species": "Lygodium microphyllum",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 879,
@@ -4397,7 +4397,7 @@
   {
     "id": 881,
     "species": "Macfadyena unguis",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 882,
@@ -4452,42 +4452,42 @@
   {
     "id": 892,
     "species": "Marsdenia brevis",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 893,
     "species": "Marsdenia coronata",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 894,
     "species": "Marsdenia fraseri",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 895,
     "species": "Marsdenia indet",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 896,
     "species": "Marsdenia lloydii",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 897,
     "species": "Marsdenia pleiadenia",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 898,
     "species": "Marsdenia rostrata",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 899,
     "species": "Marsilea indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 900,
@@ -4497,17 +4497,17 @@
   {
     "id": 901,
     "species": "Maytenus bilocularis",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 902,
     "species": "Maytenus cunninghamii",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 903,
     "species": "Maytenus disperma",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 904,
@@ -4517,7 +4517,7 @@
   {
     "id": 905,
     "species": "Maytenus silvestris",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 906,
@@ -4552,7 +4552,7 @@
   {
     "id": 912,
     "species": "Melaleuca linariifolia var. trichostachya",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 913,
@@ -4567,7 +4567,7 @@
   {
     "id": 915,
     "species": "Melaleuca pachyphylla",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 916,
@@ -4577,7 +4577,7 @@
   {
     "id": 917,
     "species": "Melaleuca salicina",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 918,
@@ -4597,17 +4597,17 @@
   {
     "id": 921,
     "species": "Melaleuca viminalis",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 922,
     "species": "Melaleuca viridiflora var. viridiflora",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 923,
     "species": "Melastoma malabathricum",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 924,
@@ -4632,7 +4632,7 @@
   {
     "id": 928,
     "species": "Melichrus sp",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 929,
@@ -4652,7 +4652,7 @@
   {
     "id": 932,
     "species": "Melodorum leichhardtii",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 933,
@@ -4682,7 +4682,7 @@
   {
     "id": 938,
     "species": "Mirbelia indet",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 939,
@@ -4712,7 +4712,7 @@
   {
     "id": 944,
     "species": "Monotoca indet",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 945,
@@ -4722,22 +4722,22 @@
   {
     "id": 946,
     "species": "Monotoca sp",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 947,
     "species": "Morinda canthoides",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 948,
     "species": "Morinda jasminoides",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 949,
     "species": "Morinda reticulata",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 950,
@@ -4767,7 +4767,7 @@
   {
     "id": 955,
     "species": "Murraya paniculata cv",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 956,
@@ -4782,7 +4782,7 @@
   {
     "id": 958,
     "species": "Myriophyllum indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 959,
@@ -4812,7 +4812,7 @@
   {
     "id": 964,
     "species": "Neoachmandra cunninghamii",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 965,
@@ -4867,7 +4867,7 @@
   {
     "id": 975,
     "species": "Nymphoides indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 976,
@@ -4927,27 +4927,27 @@
   {
     "id": 987,
     "species": "Oplismenus aemulus",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 988,
     "species": "Oplismenus imbecillis",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 989,
     "species": "Opuntia indet",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 990,
     "species": "Opuntia stricta var. stricta",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 991,
     "species": "Orchidaceae indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 992,
@@ -4982,7 +4982,7 @@
   {
     "id": 998,
     "species": "Oxalis indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 999,
@@ -5002,7 +5002,7 @@
   {
     "id": 1002,
     "species": "Oxylobium indet",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 1003,
@@ -5022,7 +5022,7 @@
   {
     "id": 1006,
     "species": "Pandorea indet",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 1007,
@@ -5032,7 +5032,7 @@
   {
     "id": 1008,
     "species": "Pandorea pandorana",
-    "type": "Shrub"
+    "type": "Vine"
   },
   {
     "id": 1009,
@@ -5087,7 +5087,7 @@
   {
     "id": 1019,
     "species": "Parsonsia indet",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 1020,
@@ -5117,7 +5117,7 @@
   {
     "id": 1025,
     "species": "Paspalidium disjunctum",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1026,
@@ -5142,7 +5142,7 @@
   {
     "id": 1030,
     "species": "Paspalidium indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1031,
@@ -5152,7 +5152,7 @@
   {
     "id": 1032,
     "species": "Paspalum indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1033,
@@ -5177,7 +5177,7 @@
   {
     "id": 1037,
     "species": "Passiflora indet",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 1038,
@@ -5207,27 +5207,27 @@
   {
     "id": 1043,
     "species": "Pennisetum alopecuroides",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1044,
     "species": "Peperomia blanda var. floribunda",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1045,
     "species": "Peripleura hispidula",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1046,
     "species": "Peripleura hispidula var. hispidula",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1047,
     "species": "Peripleura sericea",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1048,
@@ -5362,7 +5362,7 @@
   {
     "id": 1074,
     "species": "Phyllanthus mitchellii",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1075,
@@ -5377,7 +5377,7 @@
   {
     "id": 1077,
     "species": "Picris angustifolia subsp. carolorum",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1078,
@@ -5397,7 +5397,7 @@
   {
     "id": 1081,
     "species": "Pimelea latifolia subsp. altior",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 1082,
@@ -5492,17 +5492,17 @@
   {
     "id": 1100,
     "species": "Plectranthus graveolens",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 1101,
     "species": "Plectranthus parviflorus",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1102,
     "species": "Pleiogynium timorense",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1103,
@@ -5522,7 +5522,7 @@
   {
     "id": 1106,
     "species": "Poa indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1107,
@@ -5547,7 +5547,7 @@
   {
     "id": 1111,
     "species": "Poaceae indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1112,
@@ -5582,12 +5582,12 @@
   {
     "id": 1118,
     "species": "Pogonolobus reticulatus",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 1119,
     "species": "Polyalthia nitidissima",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1120,
@@ -5662,27 +5662,27 @@
   {
     "id": 1134,
     "species": "Pouteria chartacea",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1135,
     "species": "Pouteria cotinifolia var. pubescens",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1136,
     "species": "Pouteria pohlmaniana",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1137,
     "species": "Pouteria queenslandica",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1138,
     "species": "Pratia concolor",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1139,
@@ -5732,7 +5732,7 @@
   {
     "id": 1148,
     "species": "Psydrax odorata forma",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1149,
@@ -5752,7 +5752,7 @@
   {
     "id": 1152,
     "species": "Pterostylis indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1153,
@@ -5797,7 +5797,7 @@
   {
     "id": 1161,
     "species": "Pultenaea paleacea var. pauciflora",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 1162,
@@ -5822,7 +5822,7 @@
   {
     "id": 1166,
     "species": "Pycnosorus chrysanthes",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1167,
@@ -5847,17 +5847,17 @@
   {
     "id": 1171,
     "species": "Ranunculus indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1172,
     "species": "Restio indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1173,
     "species": "Restionaceae indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1174,
@@ -5892,7 +5892,7 @@
   {
     "id": 1180,
     "species": "Rhynchosia minima var. minima",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 1181,
@@ -5982,7 +5982,7 @@
   {
     "id": 1198,
     "species": "Sansevieria trifasciata",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1199,
@@ -5992,7 +5992,7 @@
   {
     "id": 1200,
     "species": "Sarcochilus indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1201,
@@ -6012,12 +6012,12 @@
   {
     "id": 1204,
     "species": "Sarga leiocladum",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1205,
     "species": "Sarga plumosum",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1206,
@@ -6037,7 +6037,7 @@
   {
     "id": 1209,
     "species": "Schefflera actinophylla",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1210,
@@ -6067,7 +6067,7 @@
   {
     "id": 1215,
     "species": "Schkuhria pinnata var. abrotanoides",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1216,
@@ -6102,7 +6102,7 @@
   {
     "id": 1222,
     "species": "Scleria indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1223,
@@ -6147,7 +6147,7 @@
   {
     "id": 1231,
     "species": "Senecio amygdalifolius",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1232,
@@ -6177,7 +6177,7 @@
   {
     "id": 1237,
     "species": "Senna x floribunda",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 1238,
@@ -6197,7 +6197,7 @@
   {
     "id": 1241,
     "species": "Setaria sphacelata var. sericea",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1242,
@@ -6212,7 +6212,7 @@
   {
     "id": 1244,
     "species": "Sida filiformis",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1245,
@@ -6227,7 +6227,7 @@
   {
     "id": 1247,
     "species": "Sisyrinchium sp",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1248,
@@ -6262,7 +6262,7 @@
   {
     "id": 1254,
     "species": "Solanum elegans",
-    "type": "Unknown"
+    "type": "Shrub"
   },
   {
     "id": 1255,
@@ -6317,7 +6317,7 @@
   {
     "id": 1265,
     "species": "Spirodela indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1266,
@@ -6347,7 +6347,7 @@
   {
     "id": 1271,
     "species": "Sporobolus indet",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1272,
@@ -6502,7 +6502,7 @@
   {
     "id": 1302,
     "species": "Tephrosia purpurea var. purpurea",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1303,
@@ -6522,7 +6522,7 @@
   {
     "id": 1306,
     "species": "Teucrium argutum var. argutum",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1307,
@@ -6567,7 +6567,7 @@
   {
     "id": 1315,
     "species": "Tragia novae",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 1316,
@@ -6577,7 +6577,7 @@
   {
     "id": 1317,
     "species": "Trema tomentosa var. viridis",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1318,
@@ -6602,12 +6602,12 @@
   {
     "id": 1322,
     "species": "Triglochin procerum",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1323,
     "species": "Triglochin striatum",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1324,
@@ -6622,7 +6622,7 @@
   {
     "id": 1326,
     "species": "Tripogon loliiformis",
-    "type": "Unknown"
+    "type": "Grass"
   },
   {
     "id": 1327,
@@ -6637,12 +6637,12 @@
   {
     "id": 1329,
     "species": "Trophis scandens",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 1330,
     "species": "Trophis scandens subsp. scandens",
-    "type": "Unknown"
+    "type": "Vine"
   },
   {
     "id": 1331,
@@ -6672,12 +6672,12 @@
   {
     "id": 1336,
     "species": "Velleia paradoxa",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1337,
     "species": "Velleia spathulata",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1338,
@@ -6707,7 +6707,7 @@
   {
     "id": 1343,
     "species": "Villarsia exaltata",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1344,
@@ -6742,7 +6742,7 @@
   {
     "id": 1350,
     "species": "Vitex lignum",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1351,
@@ -6762,7 +6762,7 @@
   {
     "id": 1354,
     "species": "Wahlenbergia communis",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1355,
@@ -6772,17 +6772,17 @@
   {
     "id": 1356,
     "species": "Wahlenbergia indet",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1357,
     "species": "Waterhousea floribunda",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1358,
     "species": "Wedelia spilanthoides",
-    "type": "Unknown"
+    "type": "Herb"
   },
   {
     "id": 1359,
@@ -6802,7 +6802,7 @@
   {
     "id": 1362,
     "species": "Wilkiea huegeliana",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1363,
@@ -6862,7 +6862,7 @@
   {
     "id": 1374,
     "species": "Xylomelum benthamii",
-    "type": "Unknown"
+    "type": "Tree"
   },
   {
     "id": 1375,
